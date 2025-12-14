@@ -80,7 +80,6 @@ This project strictly follows the **V-model development lifecycle**:
 - Simulated individual modules
 - Integrated system-level simulation
 - Tested multiple operational scenarios
-- (Optional) Test coverage using **SCADE Test**
 
 ### Code Generation & Deployment
 - Generated C code using **SCADE Code Generator**
