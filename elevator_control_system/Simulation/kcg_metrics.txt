@@ -1,0 +1,29 @@
+$********** SCADE Suite KCG 32-bit 6.6.2 (build i4) **********
+** Command: kcg662.exe -config C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/config.txt
+** Generation date: 2022-02-26T21:08:22
+*************************************************************$
+Data structures
+  Structures
+    Max members in a single structure: 84
+  Arrays
+    Max number of dimensions for an array: 0
+    Maximum size for a dimension: 0
+  Enumeration
+    Max of enum constants in a single enumeration: 26
+Control structures
+  Max numbers of case labels in a switch: 11
+  Max number of nesting levels in compound statement: 4
+Program size
+  Functions
+    Max number of function parameters in definition: 8
+    Max number of function arguments in a call: 8
+  Expressions
+    Max number of nesting levels of parenthesized expression in a full expression: 4
+  Identifiers
+    Max number of identifiers with block scope declared in one block: 241
+    Max number of macro identifiers simultaneously defined in one preprocessing translation unit: 48
+    Max number of extern identifiers in one translation unit: 24
+$********** SCADE Suite KCG 32-bit 6.6.2 (build i4) **********
+** kcg_metrics.txt
+** Generation date: 2022-02-26T21:08:22
+*************************************************************$

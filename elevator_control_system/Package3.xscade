@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="LabQ3">
+			<declarations>
+				<Type name="Direction">
+					<definition>
+						<Enum>
+							<values>
+								<Value name="Up">
+									<pragmas>
+										<ed:Value oid="!ed/4fda/150/378C/6214975d3b2d"/>
+									</pragmas>
+								</Value>
+								<Value name="Down">
+									<pragmas>
+										<ed:Value oid="!ed/4fdb/150/378C/6214975d7c7e"/>
+									</pragmas>
+								</Value>
+								<Value name="Unknown">
+									<pragmas>
+										<ed:Value oid="!ed/53c1/150/378C/6214a8252ea8"/>
+									</pragmas>
+								</Value>
+							</values>
+						</Enum>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/4fd9/150/378C/6214975d7ce8"/>
+					</pragmas>
+				</Type>
+				<Operator name="Safety5" href="Safety5.xscade"/>
+				<Operator name="Safety4" href="Safety4.xscade"/>
+				<Operator name="Safety3" href="Safety3.xscade"/>
+				<Operator name="Safety2" href="Safety2.xscade"/>
+				<Operator name="Safety1" href="Safety1.xscade"/>
+				<Operator name="Environment1" href="Environment1.xscade"/>
+				<Operator name="Speed" href="Operator71.xscade"/>
+				<Operator name="FloorsLocation" href="Operator82.xscade"/>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/5eee/67C6/2DAC/620bc467273a" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/5eef/67C6/2DAC/620bc4671b42" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/5ef0/67C6/2DAC/620bc46754e0" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/5ef1/67C6/2DAC/620bc4672756" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

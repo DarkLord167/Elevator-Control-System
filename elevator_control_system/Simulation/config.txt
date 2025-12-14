@@ -1,0 +1,3 @@
+-target_dir "C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation" -target C -name_length 200 -significance_length 31 -user_config "./user_macros.h" -probes -debug 
+-root ControlSystem
+"C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/scade_model_without_unused.scade"

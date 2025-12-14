@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Operator kind="node" name="Safety5">
+			<data>
+				<StateMachine name="SM1">
+					<states>
+						<State initial="true" name="Moving">
+							<unless>
+								<Transition kind="restart">
+									<target>
+										<StateRef name="Moving"/>
+									</target>
+									<condition>
+										<!-- GP0 or GP1 or GP2 or GPIOC7 = 0 -->
+										<NAryOp name="4" operator="or">
+											<operands>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="GP0"/>
+													</path>
+												</IdExpression>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="GP1"/>
+													</path>
+												</IdExpression>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="GP2"/>
+													</path>
+												</IdExpression>
+												<!-- GPIOC7 = 0 -->
+												<BinaryOp name="2" operator="=">
+													<operands>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="GPIOC7"/>
+															</path>
+														</IdExpression>
+														<ConstValue value="0"/>
+													</operands>
+												</BinaryOp>
+											</operands>
+										</NAryOp>
+									</condition>
+									<pragmas>
+										<ed:Transition oid="!ed/4ac7/52B1/16C0/6208cf09591"/>
+									</pragmas>
+								</Transition>
+								<Transition kind="restart">
+									<target>
+										<StateRef name="halt"/>
+									</target>
+									<condition>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="GP3"/>
+											</path>
+										</IdExpression>
+									</condition>
+									<pragmas>
+										<ed:Transition oid="!ed/4ae4/52B1/16C0/6208cf373528"/>
+									</pragmas>
+								</Transition>
+								<Transition kind="restart">
+									<target>
+										<StateRef name="halt"/>
+									</target>
+									<condition>
+										<!-- GPIOC7 = 1 -->
+										<BinaryOp name="1" operator="=">
+											<operands>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="GPIOC7"/>
+													</path>
+												</IdExpression>
+												<ConstValue value="1"/>
+											</operands>
+										</BinaryOp>
+									</condition>
+									<pragmas>
+										<ed:Transition oid="!ed/4b0b/52B1/16C0/6208cfb12c00"/>
+									</pragmas>
+								</Transition>
+							</unless>
+							<pragmas>
+								<ed:State oid="!ed/4ab7/52B1/16C0/6208cef07dfd"/>
+							</pragmas>
+						</State>
+						<State name="halt">
+							<pragmas>
+								<ed:State oid="!ed/4ad3/52B1/16C0/6208cf263ed2"/>
+							</pragmas>
+						</State>
+					</states>
+					<pragmas>
+						<ed:StateMachine oid="!ed/4ab1/52B1/16C0/6208ceeb178d"/>
+					</pragmas>
+				</StateMachine>
+			</data>
+			<pragmas>
+				<ed:Operator oid="!ed/4a1a/52B1/16C0/6208c85d5c3" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7">
+					<diagrams>
+						<NetDiagram name="Safety5_1" landscape="true" format="A4 (210 297)" oid="!ed/4a1b/52B1/16C0/6208c85d56c1">
+							<presentationElements>
+								<StateMachineGE presentable="!ed/4ab1/52B1/16C0/6208ceeb178d">
+									<position>
+										<Point x="13123" y="4551"/>
+									</position>
+									<size>
+										<Size width="13653" height="7355"/>
+									</size>
+								</StateMachineGE>
+								<StateGE presentable="!ed/4ab7/52B1/16C0/6208cef07dfd">
+									<position>
+										<Point x="13811" y="6773"/>
+									</position>
+									<size>
+										<Size width="4710" height="3598"/>
+									</size>
+								</StateGE>
+								<TransitionGE presentable="!ed/4ac7/52B1/16C0/6208cf09591">
+									<positions>
+										<Point x="15716" y="6773"/>
+										<Point x="15663" y="5662"/>
+										<Point x="16960" y="5794"/>
+										<Point x="16775" y="6773"/>
+									</positions>
+									<labelSize>
+										<Size width="4842" height="370"/>
+									</labelSize>
+									<labelPos>
+										<Point x="13758" y="5107"/>
+									</labelPos>
+									<slashPos>
+										<Point x="17806" y="5107"/>
+									</slashPos>
+								</TransitionGE>
+								<StateGE presentable="!ed/4ad3/52B1/16C0/6208cf263ed2">
+									<position>
+										<Point x="21325" y="6668"/>
+									</position>
+									<size>
+										<Size width="4710" height="3598"/>
+									</size>
+								</StateGE>
+								<TransitionGE presentable="!ed/4ae4/52B1/16C0/6208cf373528">
+									<positions>
+										<Point x="18521" y="8308"/>
+										<Point x="19447" y="8308"/>
+										<Point x="20373" y="8308"/>
+										<Point x="21325" y="8308"/>
+									</positions>
+									<labelSize>
+										<Size width="1482" height="370"/>
+									</labelSize>
+									<labelPos>
+										<Point x="19341" y="7409"/>
+									</labelPos>
+									<slashPos>
+										<Point x="20029" y="7409"/>
+									</slashPos>
+								</TransitionGE>
+								<TransitionGE presentable="!ed/4b0b/52B1/16C0/6208cfb12c00">
+									<positions>
+										<Point x="18521" y="8943"/>
+										<Point x="19447" y="8943"/>
+										<Point x="20373" y="8943"/>
+										<Point x="21325" y="8969"/>
+									</positions>
+									<labelSize>
+										<Size width="2778" height="370"/>
+									</labelSize>
+									<labelPos>
+										<Point x="18733" y="9154"/>
+									</labelPos>
+									<slashPos>
+										<Point x="20717" y="9154"/>
+									</slashPos>
+								</TransitionGE>
+							</presentationElements>
+						</NetDiagram>
+					</diagrams>
+				</ed:Operator>
+			</pragmas>
+		</Operator>
+	</declarations>
+</File>

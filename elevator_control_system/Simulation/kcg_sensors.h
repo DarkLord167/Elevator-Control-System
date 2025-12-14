@@ -1,0 +1,15 @@
+/* $********** SCADE Suite KCG 32-bit 6.6.2 (build i4) **********
+** Command: kcg662.exe -config C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/config.txt
+** Generation date: 2022-02-26T21:08:22
+*************************************************************$ */
+#ifndef _KCG_SENSORS_H_
+#define _KCG_SENSORS_H_
+
+#include "kcg_types.h"
+
+#endif /* _KCG_SENSORS_H_ */
+/* $********** SCADE Suite KCG 32-bit 6.6.2 (build i4) **********
+** kcg_sensors.h
+** Generation date: 2022-02-26T21:08:22
+*************************************************************$ */
+

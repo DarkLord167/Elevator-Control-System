@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Type name="Direction">
+			<definition>
+				<Enum>
+					<values>
+						<Value name="Up">
+							<pragmas>
+								<ed:Value oid="!ed/793f/150/378C/6215c22c26b"/>
+							</pragmas>
+						</Value>
+						<Value name="Down">
+							<pragmas>
+								<ed:Value oid="!ed/7940/150/378C/6215c22c7340"/>
+							</pragmas>
+						</Value>
+						<Value name="None">
+							<pragmas>
+								<ed:Value oid="!ed/7941/150/378C/6215c22c45d5"/>
+							</pragmas>
+						</Value>
+					</values>
+				</Enum>
+			</definition>
+			<pragmas>
+				<ed:Type oid="!ed/793e/150/378C/6215c22c4568"/>
+			</pragmas>
+		</Type>
+		<Type name="PDirection">
+			<definition>
+				<Enum>
+					<values>
+						<Value name="Upward">
+							<pragmas>
+								<ed:Value oid="!ed/5ff1/282B/5DC0/62175de328cc"/>
+							</pragmas>
+						</Value>
+						<Value name="Downward">
+							<pragmas>
+								<ed:Value oid="!ed/6001/282B/5DC0/62175e494e20"/>
+							</pragmas>
+						</Value>
+						<Value name="Stop">
+							<pragmas>
+								<ed:Value oid="!ed/6008/282B/5DC0/62175e4bbf3"/>
+							</pragmas>
+						</Value>
+					</values>
+				</Enum>
+			</definition>
+			<pragmas>
+				<ed:Type oid="!ed/5ff0/282B/5DC0/62175ddb30de"/>
+			</pragmas>
+		</Type>
+	</declarations>
+</File>

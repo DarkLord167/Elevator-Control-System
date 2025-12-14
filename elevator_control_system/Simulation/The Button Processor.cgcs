@@ -1,0 +1,57 @@
+[scade_version: 2021 R2]
+[scade_project: C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/The Button Processor.etp]
+[Code Generator]
+1a161a183f7dbd17a9d06dc778ffc372 C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/ActuatorModule.c
+f3caeed1a1b6471b1af671613d83041d C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/ActuatorModule.h
+b2d9cd49cbac85888ef17353fc79bd5d C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/ButtonProcessor.c
+b1f476af0066de1d83eef8fc134b7f4e C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/ButtonProcessor.h
+628dee91193ea8dc968395b8ed38aee2 C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/scade_model_without_unused.scade
+e0d1571f3bbbe1f700c98377b1965cf2 C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/ControlSystem.c
+53f145d12b736a242078654c0f4126fa C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/ControlSystem.h
+825633bfacaa63e788e3d8e8a9954a09 C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/Counter.c
+33860ab4ec58f455cf3be59c3dfc7180 C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/Counter.h
+2d68f1996f714239b2440317b97665a2 C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/FloorsLocation.c
+2028a92532f7ab5f569ff60f9a00fca4 C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/FloorsLocation.h
+f7f404b945b003191e5b78d5e745ea9f C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/PlanningModule.c
+913173cc5a49d59c9df0ae4f455b61c3 C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/PlanningModule.h
+17460823d8a019f141f0b2f4c1680b7f C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/PositionProcessor.c
+6264ddea93d504f6589e151775c5d5b7 C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/PositionProcessor.h
+f1ac965c449fd4e7097d6490c5d3b188 C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/SafetyModule.c
+4ef20464ce524cf88081b0a481e6e8b5 C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/SafetyModule.h
+f74f3e1e85d863c6228e6540633b1c26 C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/cmd_cg.log
+aa7911c73420d9167fbb834c9002e458 C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/config.txt
+a9690506860993e4c9fff4aaad575702 C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/kcg_consts.c
+dc24d4388b956f755db742b4fb1b0a27 C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/kcg_consts.h
+6a03dbd24c44c14f634fde789f92e2c4 C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/kcg_files.txt
+c570e85441febaa6f6d5e23e14e58b55 C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/kcg_imported_types.h
+d22d1f8631245044b0d62f1708a3081b C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/kcg_metrics.txt
+5bbe1c42ab106bd1796551c37d7f900d C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/kcg_sensors.h
+1e7f81544462831b463ed93393083509 C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/kcg_types.c
+b309a4464627084420f01fed14eef6b3 C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/kcg_types.h
+13efc4fcb7bc54c5fe75c789391b1629 C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/mapping.xml
+ae3eb7ab76cdc5ab7228e39b505e73d6 C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/user_macros.h
+[Mapping Utils]
+13efc4fcb7bc54c5fe75c789391b1629 C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/mapping.xml
+0f379c5ba395c92cdffef354dd86bfe5 C:/Program Files/ANSYS Inc/v212/SCADE/SCADE/lib/C/SmuConfig.c
+5b9e0d7ea9b52c17fdae3092ded3ba5e C:/Program Files/ANSYS Inc/v212/SCADE/SCADE/lib/C/SmuLib.c
+134415479f730b247b59be1fa4b82ed3 C:/Program Files/ANSYS Inc/v212/SCADE/SCADE/lib/C/SmuTypes.c
+f8e54064707a32ec62840ae6f743d17e C:/Program Files/ANSYS Inc/v212/SCADE/SCADE/lib/C/SmuVTable.c
+e0585246708c65dd011965f60b311d98 C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/The Button Processor.etp
+20c65f6c2d20818b5b80fe93493da973 C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/The Button Processor_mapping.c
+566ef5b532c49c8754bc811830ab7b24 C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/The Button Processor_mapping.h
+[Simulator Wrapper]
+13efc4fcb7bc54c5fe75c789391b1629 C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/mapping.xml
+e0585246708c65dd011965f60b311d98 C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/The Button Processor.etp
+364b93d5adaa401226e3a9eb53abea38 C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/The Button Processor_dll.c
+11f46bd39c00eb12ee9ff2ea9bc5b95c C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/The Button Processor_interface.c
+096c68047cf7a0511d50b8ff9e32c17a C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/The Button Processor_interface.h
+[Type Utils]
+13efc4fcb7bc54c5fe75c789391b1629 C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/mapping.xml
+0f379c5ba395c92cdffef354dd86bfe5 C:/Program Files/ANSYS Inc/v212/SCADE/SCADE/lib/C/SmuConfig.c
+5b9e0d7ea9b52c17fdae3092ded3ba5e C:/Program Files/ANSYS Inc/v212/SCADE/SCADE/lib/C/SmuLib.c
+e63dd4db596b0c8780bfb3394e53cfd7 C:/Program Files/ANSYS Inc/v212/SCADE/SCADE/lib/C/SmuPredefConv.c
+134415479f730b247b59be1fa4b82ed3 C:/Program Files/ANSYS Inc/v212/SCADE/SCADE/lib/C/SmuTypes.c
+f8e54064707a32ec62840ae6f743d17e C:/Program Files/ANSYS Inc/v212/SCADE/SCADE/lib/C/SmuVTable.c
+e0585246708c65dd011965f60b311d98 C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/The Button Processor.etp
+c2b424524f1351293910c597feb233e9 C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/The Button Processor_type.c
+b39f629f33d18b95d73f432929e87d5b C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/Simulation/The Button Processor_type.h

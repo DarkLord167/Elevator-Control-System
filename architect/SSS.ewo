@@ -1,0 +1,12 @@
+
+[STUDIO\TOOLS\CONFIGURATIONS\Reporter]
+
+"C:\\Users\\arike\\SCADE\\SSS\\SSS.etp"="HTML" 
+
+[STUDIO\TOOLS\CONFIGURATIONS\Architect Checker]
+
+"C:\\Users\\arike\\SCADE\\SSS\\SSS.etp"="BasicCheck" 
+
+[STUDIO\Workspace]
+
+"ActiveProject"="C:\\Users\\arike\\SCADE\\SSS\\SSS.etp" 

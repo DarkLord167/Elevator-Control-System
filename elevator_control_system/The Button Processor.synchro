@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ASCII"?>
+<synchro:Root xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:synchro="http://www.esterel-technologies.com/ns/synchro/1" lastSettingID="3" activeSetting="1">
+  <settings id="1" name="Synchronization with &lt;project>">
+    <properties name="referenced_files" value=""/>
+    <properties name="sync_parameters" value=""/>
+    <properties name="selected_elements_ids"/>
+    <properties name="synchronization_direction" value="sync"/>
+    <properties name="custom_synchronization_id" value="com.esterel.scsys.synchronization.default"/>
+    <properties name="synchronization_kind" value="ArchitectSuite"/>
+    <properties name="import_into_package" value=""/>
+    <properties name="push_selected_elements_ids" value=""/>
+  </settings>
+  <settings id="2" name="Synchronization with Elevator.etp">
+    <properties name="referenced_files" value="Elevator/Elevator.etp"/>
+    <properties name="sync_parameters" value="translateInOutProperties|false|translateDataPropagatedToPorts|true|translateDataPropagatedToSeveralPorts|false|translateIBDs|false|"/>
+    <properties name="selected_elements_ids" value="!ed/7cee/150/378C/6215c75b76b;!ed/5c81/150/378C/621509e44c2d;!ed/70ab/150/378C/621533c83e61;!ed/5be8/150/378C/6215080f3d1;!ed/MAIN/SUITE/MODEL;!ed/8093/150/378C/6215cc58119f;!ed/8236/150/378C/6215d549c45;!ed/7787/150/378C/6215bb7b10ab;!ed/793e/150/378C/6215c22c4568;!ed/67a5/282B/5DC0/62178862865;!ed/5ff0/282B/5DC0/62175ddb30de;_o68-EJYlEey6ANpe31xDgw;_o7B2kJYlEey6ANpe31xDgw;_o5HyEJYlEey6ANpe31xDgw;_o57qYJYlEey6ANpe31xDgw;_PmUREJYlEey6ANpe31xDgw;_o6OlUJYlEey6ANpe31xDgw;_o39UcJYlEey6ANpe31xDgw;_o5sZ0JYlEey6ANpe31xDgw;_o4rtMJYlEey6ANpe31xDgw;_o2y20JYlEey6ANpe31xDgw;_o5LccJYlEey6ANpe31xDgw"/>
+    <properties name="synchronization_direction" value="sync"/>
+    <properties name="custom_synchronization_id" value="com.esterel.scsys.synchronization.default"/>
+    <properties name="synchronization_kind" value="ArchitectSuite"/>
+    <properties name="symmetrical_sync_id" value="1"/>
+    <properties name="import_into_package"/>
+    <properties name="push_selected_elements_ids" value=""/>
+    <properties name="library_parameters" value=""/>
+    <properties name="timestamp" value="1645784894904"/>
+  </settings>
+  <settings id="3" name="Synchronization with The Elevator Arichitecture.etp">
+    <properties name="referenced_files" value="The Elevator Arichitecture/The Elevator Arichitecture.etp"/>
+    <properties name="sync_parameters" value="translateInOutProperties|false|translateDataPropagatedToPorts|true|translateDataPropagatedToSeveralPorts|true|translateIBDs|true|"/>
+    <properties name="selected_elements_ids" value="!ed/MAIN/SUITE/MODEL;!ed/7787/150/378C/6215bb7b10ab;!ed/7cee/150/378C/6215c75b76b;!ed/4ba2/3C44/4530/6207eb281750;!ed/70ab/150/378C/621533c83e61;!ed/8093/150/378C/6215cc58119f;!ed/5ad9/67C6/2DAC/620bc393567a;!ed/67a5/282B/5DC0/62178862865;!ed/5f6d/67C6/2DAC/620bc488621c;!ed/6ff4/282B/5DC0/6217a8a2d01;!ed/582e/67C6/2DAC/620bb7381a78;!ed/793e/150/378C/6215c22c4568;!ed/4be6/3C44/4530/6207ecdc651;!ed/585d/67C6/2DAC/620bb770495b;!ed/6596/67C6/2DAC/620bd5834c10;!ed/5c81/150/378C/621509e44c2d;!ed/700a/282B/5DC0/6217a8bb2c11;!ed/526a/50B4/2530/6213d688410;!ed/4e22/67C6/2DAC/620ba64e739a;!ed/5519/50B4/2530/6213edbe5abe;!ed/5eee/67C6/2DAC/620bc467273a;!ed/5617/67C6/2DAC/620bb6e21b1b;!ed/4e27/67C6/2DAC/620ba6726305;!ed/5ff0/282B/5DC0/62175ddb30de;!ed/8236/150/378C/6215d549c45;!ed/5be8/150/378C/6215080f3d1;!ed/49b8/3C44/4530/62077396761;!ed/4a1a/52B1/16C0/6208c85d5c3;!ed/4fd9/150/378C/6214975d7ce8;!ed/5c3e/150/378C/62150865608c;!ed/4d00/3C44/4530/6207f64c3a4a;!ed/6fe9/282B/5DC0/6217a89a195a;!ed/4c70/3C44/4530/6207f2bd7973;!ed/4b68/3C44/4530/6207e4c2f67;!ed/5b09/67C6/2DAC/620bc42d6492;!ed/7002/282B/5DC0/6217a8b11838;!ed/5719/67C6/2DAC/620bb6e27c28;!ed/4b3c/52B1/16C0/6208d0eb1491;!ed/6ffc/282B/5DC0/6217a8ab2fa3;_MXnNgJYyEeyjoO1Mbc-IHg;_NHIl8JYyEeyjoO1Mbc-IHg;_Mtn5wJYyEeyjoO1Mbc-IHg;_NYliUJYyEeyjoO1Mbc-IHg;_MdYeUJYyEeyjoO1Mbc-IHg;_SEaqMJYwEeyutpNM4XzLDA;_NKNIEJYyEeyjoO1Mbc-IHg;_MhTVAJYyEeyjoO1Mbc-IHg;_NJldAJYyEeyjoO1Mbc-IHg;_MXn0kJYyEeyjoO1Mbc-IHg;_MdXQMJYyEeyjoO1Mbc-IHg;_NIvvgJYyEeyjoO1Mbc-IHg;_MhmP8JYyEeyjoO1Mbc-IHg;_Mt18MJYyEeyjoO1Mbc-IHg;_MghR4JYyEeyjoO1Mbc-IHg;_NFzJMJYyEeyjoO1Mbc-IHg;_MdNfMJYyEeyjoO1Mbc-IHg;_Ms6IEJYyEeyjoO1Mbc-IHg;_NCFG0JYyEeyjoO1Mbc-IHg;_NM0XMJYyEeyjoO1Mbc-IHg;_NJLNUJYyEeyjoO1Mbc-IHg;_NEmPUJYyEeyjoO1Mbc-IHg;_NRGaQJYyEeyjoO1Mbc-IHg;_Ms79QJYyEeyjoO1Mbc-IHg;_MiJCgJYyEeyjoO1Mbc-IHg;_ND2ocJYyEeyjoO1Mbc-IHg;_MUqAIJYyEeyjoO1Mbc-IHg;_M-BGMJYyEeyjoO1Mbc-IHg;_MeB-kJYyEeyjoO1Mbc-IHg;_MVd4cJYyEeyjoO1Mbc-IHg;_MQWu8JYyEeyjoO1Mbc-IHg;_MUKQ4JYyEeyjoO1Mbc-IHg;_Mt3xYJYyEeyjoO1Mbc-IHg;_MY6OAJYyEeyjoO1Mbc-IHg;_NLTUQJYyEeyjoO1Mbc-IHg;_MYfXQJYyEeyjoO1Mbc-IHg;_MtEgIJYyEeyjoO1Mbc-IHg;_MalpAJYyEeyjoO1Mbc-IHg;_NPTqgJYyEeyjoO1Mbc-IHg;_MQeDsJYyEeyjoO1Mbc-IHg;_Mo9cMJYyEeyjoO1Mbc-IHg;_MY4Y0JYyEeyjoO1Mbc-IHg;_MjNZgJYyEeyjoO1Mbc-IHg;_NQjnsJYyEeyjoO1Mbc-IHg;_MVOA0JYyEeyjoO1Mbc-IHg;_NHiOkJYyEeyjoO1Mbc-IHg;_NFN6YJYyEeyjoO1Mbc-IHg;_MtU-0JYyEeyjoO1Mbc-IHg;_NJ_ssJYyEeyjoO1Mbc-IHg;_Mb0_IJYyEeyjoO1Mbc-IHg;_NLxOUJYyEeyjoO1Mbc-IHg;_NK0MEJYyEeyjoO1Mbc-IHg;_MgZWEJYyEeyjoO1Mbc-IHg;_MjRD4JYyEeyjoO1Mbc-IHg;_MozEIJYyEeyjoO1Mbc-IHg;_Meht0JYyEeyjoO1Mbc-IHg;_MtWM8JYyEeyjoO1Mbc-IHg;_MtFuQJYyEeyjoO1Mbc-IHg;_MZ_MEJYyEeyjoO1Mbc-IHg;_Ma9ccJYyEeyjoO1Mbc-IHg;_NGjXIJYyEeyjoO1Mbc-IHg;_MSbykJYyEeyjoO1Mbc-IHg;_Mbg2EJYyEeyjoO1Mbc-IHg;_NAPTwJYyEeyjoO1Mbc-IHg;_McZm4JYyEeyjoO1Mbc-IHg;_MtqWAJYyEeyjoO1Mbc-IHg;_MZjuQJYyEeyjoO1Mbc-IHg;_NIbmcJYyEeyjoO1Mbc-IHg;_MfohEJYyEeyjoO1Mbc-IHg"/>
+    <properties name="synchronization_direction" value="sync"/>
+    <properties name="custom_synchronization_id" value="com.esterel.scsys.synchronization.default"/>
+    <properties name="synchronization_kind" value="ArchitectSuite"/>
+    <properties name="symmetrical_sync_id" value="2"/>
+    <properties name="import_into_package"/>
+    <properties name="push_selected_elements_ids" value=""/>
+    <properties name="library_parameters" value=""/>
+    <properties name="timestamp" value="1645790293675"/>
+  </settings>
+</synchro:Root>

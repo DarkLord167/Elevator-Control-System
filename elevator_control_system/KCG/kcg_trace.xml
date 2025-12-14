@@ -1,0 +1,793 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+  <Model commandLine="" date="">
+    <Option name="use_types" value="#off#"/>
+    <Option name="imported_root_package" value="#off#"/>
+    <Option name="root_package" value="#off#"/>
+    <Option name="xml_basename" value="kcg_xml_filter_out.scade"/>
+    <Option name="state_vector" value="#off#"/>
+    <Option name="static" value="#off#"/>
+    <Option name="separate_io_all" value="#off#"/>
+    <Option name="no_separate_io" value="#off#"/>
+    <Option name="separate_io" value="#off#"/>
+    <Option name="warn_error" value="#off#"/>
+    <Option name="short_circuit" value="#off#"/>
+    <Option name="wrap_c_ops" value="#off#"/>
+    <Option name="input_file" value="C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/KCG/scade_model_without_unused.scade"/>
+    <Option name="probes" value="#off#"/>
+    <Option name="debug" value="#off#"/>
+    <Option name="no_observe" value="#off#"/>
+    <Option name="observe" value="#off#"/>
+    <Option name="user_config" value="./user_macros.h"/>
+    <Option name="input_threshold" value="#off#"/>
+    <Option name="header" value="#off#"/>
+    <Option name="significance_length" value="31"/>
+    <Option name="name_length" value="200"/>
+    <Option name="globals_prefix" value="#off#"/>
+    <Option name="keep_asserts" value="#off#"/>
+    <Option name="global_root_context" value="#off#"/>
+    <Option name="noexp" value="#off#"/>
+    <Option name="exp" value="#off#"/>
+    <Option name="expall" value="#on#"/>
+    <Option name="target_dir" value="C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/KCG"/>
+    <Option name="target" value="C"/>
+    <Option name="root" value="ControlSystem"/>
+    <Option name="auth" value="#off#"/>
+    <EnumType scadeName="PDirection" targetName="PDirection">
+      <EnumVal scadeName="Upward" targetName="Upward"/>
+      <EnumVal scadeName="Downward" targetName="Downward"/>
+      <EnumVal scadeName="Stop" targetName="Stop"/>
+    </EnumType>
+    <EnumType scadeName="Direction" targetName="Direction">
+      <EnumVal scadeName="Up" targetName="Up"/>
+      <EnumVal scadeName="Down" targetName="Down"/>
+      <EnumVal scadeName="None" targetName="None"/>
+    </EnumType>
+    <RootNode headerFile="ControlSystem.h" scadeName="ControlSystem" targetCycleFct="ControlSystem" targetInitFct="ControlSystem_reset" targetInitializationFct="ControlSystem_init">
+      <Input inCtx="true" scadeName="GPIOC0" scadeType="bool" targetName="GPIOC0" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="GPIOC1" scadeType="bool" targetName="GPIOC1" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="GPIOC2" scadeType="bool" targetName="GPIOC2" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="GPIOC3" scadeType="bool" targetName="GPIOC3" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="GPIOC8" scadeType="bool" targetName="GPIOC8" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="GPIOC7" scadeType="bool" targetName="GPIOC7" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="GPIOC9" scadeType="bool" targetName="GPIOC9" targetType="kcg_bool"/>
+      <Output inCtx="true" scadeName="Channel1" scadeType="int8" targetName="Channel1" targetType="kcg_int8"/>
+      <Output inCtx="true" scadeName="Channel2" scadeType="int8" targetName="Channel2" targetType="kcg_int8"/>
+      <NodeInlining instName="2" scadeName="ButtonProcessor">
+        <Automaton scadeName="SM2" targetStatesType="_8_SSM_ST_SM2" targetTransitionsType="_9_SSM_TR_SM2">
+          <State scadeName="Floor1Button10" targetName="SSM_st_Floor1Button10_SM2">
+            <Fork priority="1">
+              <Condition/>
+              <Transition kind="strong" scadeDest="Floor1Button4" targetName="SSM_TR_Floor1Button10_Floor1Button4_1_Floor1Button10_SM2"/>
+            </Fork>
+          </State>
+          <State scadeName="Floor1Button11" targetName="SSM_st_Floor1Button11_SM2">
+            <Fork priority="1">
+              <Condition/>
+              <Transition kind="strong" scadeDest="Floor1Button10" targetName="SSM_TR_Floor1Button11_Floor1Button10_1_Floor1Button11_SM2"/>
+            </Fork>
+          </State>
+          <State scadeName="Floor1Button4" targetName="SSM_st_Floor1Button4_SM2">
+            <NodeInlining instName="11" scadeName="Counter">
+              <Output inCtx="true" scadeName="Output" scadeType="int16" targetName="_L1_Counter_11_ButtonProcessor_2" targetType="kcg_int16"/>
+              <Last/>
+            </NodeInlining>
+            <Fork priority="1">
+              <Condition/>
+              <Action>
+                <Last/>
+              </Action>
+              <Transition kind="strong" scadeDest="Floor1Button11" targetName="SSM_TR_Floor1Button4_Floor1Button11_1_Floor1Button4_SM2"/>
+            </Fork>
+            <Fork priority="2">
+              <Condition/>
+              <Transition kind="strong" scadeDest="Floor1Button10" targetName="_17_SSM_TR_Floor1Button4_Floor1Button10_2_Floor1Button4_SM2"/>
+            </Fork>
+          </State>
+          <NextState inCtx="true" mem="true" targetName="SM2_state_nxt_ButtonProcessor_2"/>
+        </Automaton>
+        <Automaton scadeName="SM3" targetStatesType="SSM_ST_SM3" targetTransitionsType="SSM_TR_SM3">
+          <State scadeName="Floor1Button10" targetName="SSM_st_Floor1Button10_SM3">
+            <Fork priority="1">
+              <Condition/>
+              <Transition kind="strong" scadeDest="Floor1Button4" targetName="_18_SSM_TR_Floor1Button10_Floor1Button4_1_Floor1Button10_SM3"/>
+            </Fork>
+          </State>
+          <State scadeName="Floor1Button11" targetName="SSM_st_Floor1Button11_SM3">
+            <Fork priority="1">
+              <Condition/>
+              <Transition kind="strong" scadeDest="Floor1Button10" targetName="_19_SSM_TR_Floor1Button11_Floor1Button10_1_Floor1Button11_SM3"/>
+            </Fork>
+          </State>
+          <State scadeName="Floor1Button4" targetName="SSM_st_Floor1Button4_SM3">
+            <NodeInlining instName="12" scadeName="Counter">
+              <Output inCtx="true" scadeName="Output" scadeType="int16" targetName="_L1_Counter_12_ButtonProcessor_2" targetType="kcg_int16"/>
+              <Last/>
+            </NodeInlining>
+            <Fork priority="1">
+              <Condition/>
+              <Action>
+                <Last/>
+              </Action>
+              <Transition kind="strong" scadeDest="Floor1Button11" targetName="_20_SSM_TR_Floor1Button4_Floor1Button11_1_Floor1Button4_SM3"/>
+            </Fork>
+            <Fork priority="2">
+              <Condition/>
+              <Transition kind="strong" scadeDest="Floor1Button10" targetName="_21_SSM_TR_Floor1Button4_Floor1Button10_2_Floor1Button4_SM3"/>
+            </Fork>
+          </State>
+          <NextState inCtx="true" mem="true" targetName="SM3_state_nxt_ButtonProcessor_2"/>
+        </Automaton>
+        <Automaton scadeName="SM4" targetStatesType="SSM_ST_SM4" targetTransitionsType="SSM_TR_SM4">
+          <State scadeName="Floor1Button10" targetName="SSM_st_Floor1Button10_SM4">
+            <Fork priority="1">
+              <Condition/>
+              <Transition kind="strong" scadeDest="Floor1Button4" targetName="_22_SSM_TR_Floor1Button10_Floor1Button4_1_Floor1Button10_SM4"/>
+            </Fork>
+          </State>
+          <State scadeName="Floor1Button11" targetName="SSM_st_Floor1Button11_SM4">
+            <Fork priority="1">
+              <Condition/>
+              <Transition kind="strong" scadeDest="Floor1Button10" targetName="_23_SSM_TR_Floor1Button11_Floor1Button10_1_Floor1Button11_SM4"/>
+            </Fork>
+          </State>
+          <State scadeName="Floor1Button4" targetName="SSM_st_Floor1Button4_SM4">
+            <NodeInlining instName="13" scadeName="Counter">
+              <Output inCtx="true" scadeName="Output" scadeType="int16" targetName="_L1_Counter_13_ButtonProcessor_2" targetType="kcg_int16"/>
+              <Last/>
+            </NodeInlining>
+            <Fork priority="1">
+              <Condition/>
+              <Action>
+                <Last/>
+              </Action>
+              <Transition kind="strong" scadeDest="Floor1Button11" targetName="_24_SSM_TR_Floor1Button4_Floor1Button11_1_Floor1Button4_SM4"/>
+            </Fork>
+            <Fork priority="2">
+              <Condition/>
+              <Transition kind="strong" scadeDest="Floor1Button10" targetName="_25_SSM_TR_Floor1Button4_Floor1Button10_2_Floor1Button4_SM4"/>
+            </Fork>
+          </State>
+          <NextState inCtx="true" mem="true" targetName="SM4_state_nxt_ButtonProcessor_2"/>
+        </Automaton>
+        <Automaton scadeName="SM1" targetStatesType="_10_SSM_ST_SM1" targetTransitionsType="_11_SSM_TR_SM1">
+          <State scadeName="Floor1Button10" targetName="SSM_st_Floor1Button10_SM1">
+            <Fork priority="1">
+              <Condition/>
+              <Transition kind="strong" scadeDest="Floor1Button4" targetName="_27_SSM_TR_Floor1Button10_Floor1Button4_1_Floor1Button10_SM1"/>
+            </Fork>
+          </State>
+          <State scadeName="Floor1Button11" targetName="SSM_st_Floor1Button11_SM1">
+            <Fork priority="1">
+              <Condition/>
+              <Transition kind="strong" scadeDest="Floor1Button10" targetName="_28_SSM_TR_Floor1Button11_Floor1Button10_1_Floor1Button11_SM1"/>
+            </Fork>
+          </State>
+          <State scadeName="Floor1Button4" targetName="SSM_st_Floor1Button4_SM1">
+            <NodeInlining instName="14" scadeName="Counter">
+              <Output inCtx="true" scadeName="Output" scadeType="int16" targetName="_L1_Counter_14_ButtonProcessor_2" targetType="kcg_int16"/>
+              <Last/>
+            </NodeInlining>
+            <Fork priority="1">
+              <Condition/>
+              <Action>
+                <Last/>
+              </Action>
+              <Transition kind="strong" scadeDest="Floor1Button11" targetName="_29_SSM_TR_Floor1Button4_Floor1Button11_1_Floor1Button4_SM1"/>
+            </Fork>
+            <Fork priority="2">
+              <Condition/>
+              <Transition kind="strong" scadeDest="Floor1Button10" targetName="_30_SSM_TR_Floor1Button4_Floor1Button10_2_Floor1Button4_SM1"/>
+            </Fork>
+          </State>
+          <NextState inCtx="true" mem="true" targetName="SM1_state_nxt_ButtonProcessor_2"/>
+        </Automaton>
+        <Automaton scadeName="SM5" targetStatesType="SSM_ST_SM5" targetTransitionsType="SSM_TR_SM5">
+          <State scadeName="Floor1Button10" targetName="SSM_st_Floor1Button10_SM5">
+            <Fork priority="1">
+              <Condition/>
+              <Transition kind="strong" scadeDest="Floor1Button4" targetName="_31_SSM_TR_Floor1Button10_Floor1Button4_1_Floor1Button10_SM5"/>
+            </Fork>
+          </State>
+          <State scadeName="Floor1Button11" targetName="SSM_st_Floor1Button11_SM5">
+            <Fork priority="1">
+              <Condition/>
+              <Transition kind="strong" scadeDest="Floor1Button10" targetName="_32_SSM_TR_Floor1Button11_Floor1Button10_1_Floor1Button11_SM5"/>
+            </Fork>
+          </State>
+          <State scadeName="Floor1Button4" targetName="SSM_st_Floor1Button4_SM5">
+            <NodeInlining instName="15" scadeName="Counter">
+              <Output inCtx="true" scadeName="Output" scadeType="int16" targetName="_L1_Counter_15_ButtonProcessor_2" targetType="kcg_int16"/>
+              <Last/>
+            </NodeInlining>
+            <Fork priority="1">
+              <Condition/>
+              <Action>
+                <Last/>
+              </Action>
+              <Transition kind="strong" scadeDest="Floor1Button11" targetName="_33_SSM_TR_Floor1Button4_Floor1Button11_1_Floor1Button4_SM5"/>
+            </Fork>
+            <Fork priority="2">
+              <Condition/>
+              <Transition kind="strong" scadeDest="Floor1Button10" targetName="_34_SSM_TR_Floor1Button4_Floor1Button10_2_Floor1Button4_SM5"/>
+            </Fork>
+          </State>
+          <NextState inCtx="true" mem="true" targetName="SM5_state_nxt_ButtonProcessor_2"/>
+        </Automaton>
+        <Automaton scadeName="SM6" targetStatesType="SSM_ST_SM6" targetTransitionsType="SSM_TR_SM6">
+          <State scadeName="Floor1Button10" targetName="SSM_st_Floor1Button10_SM6">
+            <Fork priority="1">
+              <Condition/>
+              <Transition kind="strong" scadeDest="Floor1Button4" targetName="_35_SSM_TR_Floor1Button10_Floor1Button4_1_Floor1Button10_SM6"/>
+            </Fork>
+          </State>
+          <State scadeName="Floor1Button11" targetName="SSM_st_Floor1Button11_SM6">
+            <Fork priority="1">
+              <Condition/>
+              <Transition kind="strong" scadeDest="Floor1Button10" targetName="_36_SSM_TR_Floor1Button11_Floor1Button10_1_Floor1Button11_SM6"/>
+            </Fork>
+          </State>
+          <State scadeName="Floor1Button4" targetName="SSM_st_Floor1Button4_SM6">
+            <NodeInlining instName="16" scadeName="Counter">
+              <Output inCtx="true" scadeName="Output" scadeType="int16" targetName="_L1_Counter_16_ButtonProcessor_2" targetType="kcg_int16"/>
+              <Last/>
+            </NodeInlining>
+            <Fork priority="1">
+              <Condition/>
+              <Action>
+                <Last/>
+              </Action>
+              <Transition kind="strong" scadeDest="Floor1Button11" targetName="_37_SSM_TR_Floor1Button4_Floor1Button11_1_Floor1Button4_SM6"/>
+            </Fork>
+            <Fork priority="2">
+              <Condition/>
+              <Transition kind="strong" scadeDest="Floor1Button10" targetName="_38_SSM_TR_Floor1Button4_Floor1Button10_2_Floor1Button4_SM6"/>
+            </Fork>
+          </State>
+          <NextState inCtx="true" mem="true" targetName="SM6_state_nxt_ButtonProcessor_2"/>
+        </Automaton>
+      </NodeInlining>
+      <NodeInlining instName="2" scadeName="PlanningModule">
+        <Automaton scadeName="PlanningModule" targetStatesType="SSM_ST_PlanningModule" targetTransitionsType="SSM_TR_PlanningModule">
+          <State scadeName="Floor1" targetName="SSM_st_Floor1_PlanningModule">
+            <Fork priority="1">
+              <Condition/>
+              <Action>
+                <Last/>
+              </Action>
+              <Transition kind="strong" scadeDest="Movin1To2" targetName="SSM_TR_Floor1_Movin1To2_1_Floor1_PlanningModule"/>
+            </Fork>
+            <Fork priority="2">
+              <Condition/>
+              <Action>
+                <Last/>
+              </Action>
+              <Transition kind="strong" scadeDest="Movin1To3" targetName="SSM_TR_Floor1_Movin1To3_2_Floor1_PlanningModule"/>
+            </Fork>
+          </State>
+          <State scadeName="Movin1To2" targetName="SSM_st_Movin1To2_PlanningModule">
+            <Fork priority="1">
+              <Condition/>
+              <Transition kind="strong" scadeDest="Movin1To2" targetName="SSM_TR_Movin1To2_Movin1To2_1_Movin1To2_PlanningModule"/>
+            </Fork>
+            <Fork priority="2">
+              <Condition/>
+              <Transition kind="strong" scadeDest="Floor2" targetName="SSM_TR_Movin1To2_Floor2_2_Movin1To2_PlanningModule"/>
+            </Fork>
+            <Fork priority="3">
+              <Condition/>
+              <Transition kind="strong" scadeDest="Stop" targetName="SSM_TR_Movin1To2_Stop_3_Movin1To2_PlanningModule"/>
+            </Fork>
+          </State>
+          <State scadeName="Floor2" targetName="SSM_st_Floor2_PlanningModule">
+            <Fork priority="1">
+              <Condition/>
+              <Action>
+                <Last/>
+              </Action>
+              <Transition kind="strong" scadeDest="Moving2To3" targetName="SSM_TR_Floor2_Moving2To3_1_Floor2_PlanningModule"/>
+            </Fork>
+            <Fork priority="2">
+              <Condition/>
+              <Transition kind="strong" scadeDest="Movin2To1" targetName="SSM_TR_Floor2_Movin2To1_2_Floor2_PlanningModule"/>
+            </Fork>
+          </State>
+          <State scadeName="Floor3" targetName="SSM_st_Floor3_PlanningModule">
+            <Fork priority="1">
+              <Condition/>
+              <Action>
+                <Last/>
+              </Action>
+              <Transition kind="strong" scadeDest="Moving3To1" targetName="SSM_TR_Floor3_Moving3To1_1_Floor3_PlanningModule"/>
+            </Fork>
+            <Fork priority="2">
+              <Condition/>
+              <Action>
+                <Last/>
+              </Action>
+              <Transition kind="strong" scadeDest="Moving3To2" targetName="SSM_TR_Floor3_Moving3To2_2_Floor3_PlanningModule"/>
+            </Fork>
+          </State>
+          <State scadeName="Movin1To3" targetName="SSM_st_Movin1To3_PlanningModule">
+            <Fork priority="1">
+              <Condition/>
+              <Transition kind="strong" scadeDest="Floor3" targetName="SSM_TR_Movin1To3_Floor3_1_Movin1To3_PlanningModule"/>
+            </Fork>
+            <Fork priority="2">
+              <Condition/>
+              <Transition kind="strong" scadeDest="Movin1To3" targetName="SSM_TR_Movin1To3_Movin1To3_2_Movin1To3_PlanningModule"/>
+            </Fork>
+            <Fork priority="3">
+              <Condition/>
+              <Transition kind="strong" scadeDest="Movin1To2" targetName="SSM_TR_Movin1To3_Movin1To2_3_Movin1To3_PlanningModule"/>
+            </Fork>
+          </State>
+          <State scadeName="Moving2To3" targetName="SSM_st_Moving2To3_PlanningModule">
+            <Fork priority="1">
+              <Condition/>
+              <Transition kind="strong" scadeDest="Floor3" targetName="SSM_TR_Moving2To3_Floor3_1_Moving2To3_PlanningModule"/>
+            </Fork>
+            <Fork priority="2">
+              <Condition/>
+              <Transition kind="strong" scadeDest="Moving2To3" targetName="SSM_TR_Moving2To3_Moving2To3_2_Moving2To3_PlanningModule"/>
+            </Fork>
+            <Fork priority="3">
+              <Condition/>
+              <Transition kind="strong" scadeDest="Stop" targetName="SSM_TR_Moving2To3_Stop_3_Moving2To3_PlanningModule"/>
+            </Fork>
+          </State>
+          <State scadeName="Moving3To1" targetName="SSM_st_Moving3To1_PlanningModule">
+            <Fork priority="1">
+              <Condition/>
+              <Transition kind="strong" scadeDest="Floor1" targetName="SSM_TR_Moving3To1_Floor1_1_Moving3To1_PlanningModule"/>
+            </Fork>
+            <Fork priority="2">
+              <Condition/>
+              <Transition kind="strong" scadeDest="Moving3To1" targetName="SSM_TR_Moving3To1_Moving3To1_2_Moving3To1_PlanningModule"/>
+            </Fork>
+            <Fork priority="3">
+              <Condition/>
+              <Transition kind="strong" scadeDest="Moving3To2" targetName="SSM_TR_Moving3To1_Moving3To2_3_Moving3To1_PlanningModule"/>
+            </Fork>
+            <Fork priority="4">
+              <Condition/>
+              <Transition kind="strong" scadeDest="Stop" targetName="SSM_TR_Moving3To1_Stop_4_Moving3To1_PlanningModule"/>
+            </Fork>
+          </State>
+          <State scadeName="Moving3To2" targetName="SSM_st_Moving3To2_PlanningModule">
+            <Fork priority="1">
+              <Condition/>
+              <Transition kind="strong" scadeDest="Floor2" targetName="SSM_TR_Moving3To2_Floor2_1_Moving3To2_PlanningModule"/>
+            </Fork>
+            <Fork priority="2">
+              <Condition/>
+              <Transition kind="strong" scadeDest="Moving3To2" targetName="SSM_TR_Moving3To2_Moving3To2_2_Moving3To2_PlanningModule"/>
+            </Fork>
+            <Fork priority="3">
+              <Condition/>
+              <Transition kind="strong" scadeDest="Stop" targetName="SSM_TR_Moving3To2_Stop_3_Moving3To2_PlanningModule"/>
+            </Fork>
+          </State>
+          <State scadeName="Movin2To1" targetName="SSM_st_Movin2To1_PlanningModule">
+            <Fork priority="1">
+              <Condition/>
+              <Transition kind="strong" scadeDest="Floor1" targetName="SSM_TR_Movin2To1_Floor1_1_Movin2To1_PlanningModule"/>
+            </Fork>
+            <Fork priority="2">
+              <Condition/>
+              <Transition kind="strong" scadeDest="Movin2To1" targetName="SSM_TR_Movin2To1_Movin2To1_2_Movin2To1_PlanningModule"/>
+            </Fork>
+            <Fork priority="3">
+              <Condition/>
+              <Transition kind="strong" scadeDest="Stop" targetName="SSM_TR_Movin2To1_Stop_3_Movin2To1_PlanningModule"/>
+            </Fork>
+          </State>
+          <State scadeName="Stop" targetName="SSM_st_Stop_PlanningModule"/>
+          <NextState inCtx="true" mem="true" targetName="PlanningModule_state_nxt_PlanningModule_2"/>
+        </Automaton>
+        <Automaton scadeName="SM2" targetStatesType="SSM_ST_SM2" targetTransitionsType="SSM_TR_SM2">
+          <State scadeName="State11" targetName="SSM_st_State11_SM2">
+            <Fork priority="1">
+              <Condition/>
+              <Transition kind="strong" scadeDest="State12" targetName="SSM_TR_State11_State12_1_State11_SM2"/>
+            </Fork>
+            <Fork priority="2">
+              <Condition/>
+              <Transition kind="strong" scadeDest="State13" targetName="SSM_TR_State11_State13_2_State11_SM2"/>
+            </Fork>
+            <Fork priority="3">
+              <Condition/>
+              <Transition kind="strong" scadeDest="State14" targetName="SSM_TR_State11_State14_3_State11_SM2"/>
+            </Fork>
+          </State>
+          <State scadeName="State12" targetName="SSM_st_State12_SM2">
+            <Fork priority="1">
+              <Condition/>
+              <Transition kind="strong" scadeDest="State18" targetName="SSM_TR_State12_State18_1_State12_SM2"/>
+            </Fork>
+          </State>
+          <State scadeName="State13" targetName="SSM_st_State13_SM2">
+            <Fork priority="1">
+              <Condition/>
+              <Transition kind="strong" scadeDest="State18" targetName="SSM_TR_State13_State18_1_State13_SM2"/>
+            </Fork>
+          </State>
+          <State scadeName="State14" targetName="SSM_st_State14_SM2">
+            <Fork priority="1">
+              <Condition/>
+              <Transition kind="strong" scadeDest="State18" targetName="SSM_TR_State14_State18_1_State14_SM2"/>
+            </Fork>
+          </State>
+          <State scadeName="State17" targetName="SSM_st_State17_SM2">
+            <Fork priority="1">
+              <Condition/>
+              <Transition kind="strong" scadeDest="State11" targetName="SSM_TR_State17_State11_1_State17_SM2"/>
+            </Fork>
+          </State>
+          <State scadeName="State16" targetName="SSM_st_State16_SM2">
+            <Fork priority="1">
+              <Condition/>
+              <Transition kind="strong" scadeDest="State11" targetName="SSM_TR_State16_State11_1_State16_SM2"/>
+            </Fork>
+          </State>
+          <State scadeName="State15" targetName="SSM_st_State15_SM2">
+            <Fork priority="1">
+              <Condition/>
+              <Transition kind="strong" scadeDest="State11" targetName="SSM_TR_State15_State11_1_State15_SM2"/>
+            </Fork>
+          </State>
+          <State scadeName="State18" targetName="SSM_st_State18_SM2">
+            <Fork priority="1">
+              <Condition/>
+              <Transition kind="strong" scadeDest="State16" targetName="SSM_TR_State18_State16_1_State18_SM2"/>
+            </Fork>
+            <Fork priority="2">
+              <Condition/>
+              <Transition kind="strong" scadeDest="State17" targetName="SSM_TR_State18_State17_2_State18_SM2"/>
+            </Fork>
+            <Fork priority="3">
+              <Condition/>
+              <Transition kind="strong" scadeDest="State15" targetName="SSM_TR_State18_State15_3_State18_SM2"/>
+            </Fork>
+          </State>
+          <NextState inCtx="true" mem="true" targetName="SM2_state_nxt_PlanningModule_2"/>
+        </Automaton>
+      </NodeInlining>
+      <NodeInlining instName="2" scadeName="SafetyModule">
+        <Automaton scadeName="SM1" targetStatesType="_4_SSM_ST_SM1" targetTransitionsType="_5_SSM_TR_SM1">
+          <State scadeName="NormalMode" targetName="SSM_st_NormalMode_SM1">
+            <NodeInlining instName="6" scadeName="Counter">
+              <Output inCtx="true" scadeName="Output" scadeType="int16" targetName="_L1_Counter_6_SafetyModule_2" targetType="kcg_int16"/>
+              <Last/>
+            </NodeInlining>
+            <Fork priority="1">
+              <Condition/>
+              <Action>
+                <Last/>
+              </Action>
+              <Transition kind="strong" scadeDest="Safety5" targetName="SSM_TR_NormalMode_Safety5_1_NormalMode_SM1"/>
+            </Fork>
+            <Fork priority="2">
+              <Condition/>
+              <Action>
+                <Last/>
+              </Action>
+              <Transition kind="strong" scadeDest="Environment3PC" targetName="SSM_TR_NormalMode_Environment3PC_2_NormalMode_SM1"/>
+            </Fork>
+            <Fork priority="3">
+              <Condition/>
+              <Action>
+                <Last/>
+              </Action>
+              <Transition kind="strong" scadeDest="Environment2" targetName="SSM_TR_NormalMode_Environment2_3_NormalMode_SM1"/>
+            </Fork>
+            <Fork priority="4">
+              <Condition/>
+              <Action>
+                <Last/>
+              </Action>
+              <Transition kind="strong" scadeDest="Safety4" targetName="SSM_TR_NormalMode_Safety4_4_NormalMode_SM1"/>
+            </Fork>
+            <Fork priority="5">
+              <Condition/>
+              <Action>
+                <Last/>
+              </Action>
+              <Transition kind="strong" scadeDest="Safety2" targetName="SSM_TR_NormalMode_Safety2_5_NormalMode_SM1"/>
+            </Fork>
+            <Fork priority="6">
+              <Condition/>
+              <Action>
+                <Last/>
+              </Action>
+              <Transition kind="strong" scadeDest="Safety3" targetName="SSM_TR_NormalMode_Safety3_6_NormalMode_SM1"/>
+            </Fork>
+            <Fork priority="7">
+              <Condition/>
+              <Action>
+                <Last/>
+              </Action>
+              <Transition kind="strong" scadeDest="Safety1PC" targetName="SSM_TR_NormalMode_Safety1PC_7_NormalMode_SM1"/>
+            </Fork>
+            <Fork priority="8">
+              <Condition/>
+              <Action>
+                <Last/>
+              </Action>
+              <Transition kind="strong" scadeDest="Environment1" targetName="SSM_TR_NormalMode_Environment1_8_NormalMode_SM1"/>
+            </Fork>
+            <Fork priority="9">
+              <Condition/>
+              <Action>
+                <Last/>
+              </Action>
+              <Transition kind="strong" scadeDest="Safety4" targetName="SSM_TR_NormalMode_Safety4_9_NormalMode_SM1"/>
+            </Fork>
+          </State>
+          <State scadeName="Environment1" targetName="SSM_st_Environment1_SM1"/>
+          <State scadeName="Safety2" targetName="SSM_st_Safety2_SM1"/>
+          <State scadeName="Safety4" targetName="SSM_st_Safety4_SM1"/>
+          <State scadeName="Safety3" targetName="SSM_st_Safety3_SM1"/>
+          <State scadeName="Safety1PC" targetName="SSM_st_Safety1PC_SM1">
+            <NodeInlining instName="17" scadeName="Counter">
+              <Output inCtx="true" scadeName="Output" scadeType="int16" targetName="_L1_Counter_17_SafetyModule_2" targetType="kcg_int16"/>
+              <Last/>
+            </NodeInlining>
+            <Fork priority="1">
+              <Condition/>
+              <Action>
+                <Last/>
+              </Action>
+              <Transition kind="strong" scadeDest="Safety1" targetName="SSM_TR_Safety1PC_Safety1_1_Safety1PC_SM1"/>
+            </Fork>
+          </State>
+          <State scadeName="Safety5" targetName="SSM_st_Safety5_SM1"/>
+          <State scadeName="Environment2" targetName="SSM_st_Environment2_SM1"/>
+          <State scadeName="Environment3" targetName="SSM_st_Environment3_SM1"/>
+          <State scadeName="Safety1" targetName="SSM_st_Safety1_SM1"/>
+          <State scadeName="Environment3PC" targetName="SSM_st_Environment3PC_SM1">
+            <NodeInlining instName="1" scadeName="FloorsLocation">
+              <Automaton scadeName="SM1" targetStatesType="_6_SSM_ST_SM1" targetTransitionsType="_7_SSM_TR_SM1">
+                <State scadeName="State1" targetName="SSM_st_State1_SM1"/>
+              </Automaton>
+            </NodeInlining>
+            <Fork priority="1">
+              <Condition/>
+              <Action>
+                <Last/>
+              </Action>
+              <Transition kind="strong" scadeDest="NormalMode" targetName="SSM_TR_Environment3PC_NormalMode_1_Environment3PC_SM1"/>
+            </Fork>
+            <Fork priority="2">
+              <Condition/>
+              <Action>
+                <Last/>
+              </Action>
+              <Transition kind="strong" scadeDest="Environment3" targetName="SSM_TR_Environment3PC_Environment3_2_Environment3PC_SM1"/>
+            </Fork>
+          </State>
+          <NextState inCtx="true" mem="true" targetName="SM1_state_nxt_SafetyModule_2"/>
+        </Automaton>
+      </NodeInlining>
+      <NodeInlining instName="2" scadeName="PositionProcessor">
+        <Input inCtx="true" scadeName="setDirection" scadeType="Direction" targetName="setDirection_PositionProcessor_2" targetType="Direction"/>
+        <Input inCtx="true" scadeName="GPIOC9" scadeType="bool" targetName="GPIOC9" targetType="kcg_bool"/>
+        <Output inCtx="true" scadeName="Position" scadeType="int16" targetName="Position_PositionProcessor_2" targetType="kcg_int16"/>
+        <Output inCtx="true" scadeName="Speed" scadeType="int16" targetName="_L54" targetType="kcg_int16"/>
+        <Automaton scadeName="SM1" targetStatesType="_2_SSM_ST_SM1" targetTransitionsType="_3_SSM_TR_SM1">
+          <State scadeName="MovingUp" targetName="SSM_st_MovingUp_SM1">
+            <Last/>
+            <Fork priority="1">
+              <Condition/>
+              <Action>
+                <Last/>
+              </Action>
+              <Transition kind="strong" scadeDest="Initial" targetName="SSM_TR_MovingUp_Initial_1_MovingUp_SM1"/>
+            </Fork>
+            <Fork priority="2">
+              <Condition/>
+              <Action>
+                <Last/>
+              </Action>
+              <Transition kind="strong" scadeDest="WaintingForNegPulse" targetName="SSM_TR_MovingUp_WaintingForNegPulse_2_MovingUp_SM1"/>
+            </Fork>
+          </State>
+          <State scadeName="MovingUp1" targetName="SSM_st_MovingUp1_SM1">
+            <Last/>
+            <Fork priority="1">
+              <Condition/>
+              <Transition kind="strong" scadeDest="Initial" targetName="SSM_TR_MovingUp1_Initial_1_MovingUp1_SM1"/>
+            </Fork>
+            <Fork priority="2">
+              <Condition/>
+              <Action>
+                <Last/>
+              </Action>
+              <Transition kind="strong" scadeDest="WaintingForNegPulse" targetName="SSM_TR_MovingUp1_WaintingForNegPulse_2_MovingUp1_SM1"/>
+            </Fork>
+          </State>
+          <State scadeName="State4" targetName="SSM_st_State4_SM1">
+            <NodeInlining instName="2" scadeName="Counter">
+              <Output inCtx="true" scadeName="Output" scadeType="int16" targetName="_L1_Counter_2_PositionProcessor_2" targetType="kcg_int16"/>
+              <Last/>
+            </NodeInlining>
+            <Fork priority="1">
+              <Condition/>
+              <Action>
+                <Last/>
+                <Last/>
+              </Action>
+              <Transition kind="strong" scadeDest="MovingUp1" targetName="SSM_TR_State4_MovingUp1_1_State4_SM1"/>
+            </Fork>
+            <Fork priority="2">
+              <Condition/>
+              <Action>
+                <Last/>
+                <Last/>
+              </Action>
+              <Transition kind="strong" scadeDest="MovingUp" targetName="SSM_TR_State4_MovingUp_2_State4_SM1"/>
+            </Fork>
+            <Fork priority="3">
+              <Condition/>
+              <Action>
+                <Last/>
+                <Last/>
+              </Action>
+              <Transition kind="strong" scadeDest="State4" targetName="SSM_TR_State4_State4_3_State4_SM1"/>
+            </Fork>
+            <Fork priority="4">
+              <Condition/>
+              <Action>
+                <Last/>
+              </Action>
+              <Transition kind="strong" scadeDest="Initial" targetName="SSM_TR_State4_Initial_4_State4_SM1"/>
+            </Fork>
+          </State>
+          <State scadeName="Initial" targetName="_12_SSM_st_Initial_SM1">
+            <Fork priority="1">
+              <Condition/>
+              <Action>
+                <Last/>
+              </Action>
+              <Transition kind="strong" scadeDest="State4" targetName="SSM_TR_Initial_State4_1_Initial_SM1"/>
+            </Fork>
+          </State>
+          <State scadeName="WaintingForNegPulse" targetName="SSM_st_WaintingForNegPulse_SM1">
+            <NodeInlining instName="3" scadeName="Counter">
+              <Output inCtx="true" scadeName="Output" scadeType="int16" targetName="_L1_Counter_3_PositionProcessor_2" targetType="kcg_int16"/>
+              <Last/>
+            </NodeInlining>
+            <Fork priority="1">
+              <Condition/>
+              <Action>
+                <Last/>
+              </Action>
+              <Transition kind="strong" scadeDest="State4" targetName="SSM_TR_WaintingForNegPulse_State4_1_WaintingForNegPulse_SM1"/>
+            </Fork>
+            <Fork priority="2">
+              <Condition/>
+              <Action>
+                <Last/>
+              </Action>
+              <Transition kind="strong" scadeDest="WaintingForNegPulse" targetName="SSM_TR_WaintingForNegPulse_WaintingForNegPulse_2_WaintingForNegPulse_SM1"/>
+            </Fork>
+            <Fork priority="3">
+              <Condition/>
+              <Action>
+                <Last/>
+              </Action>
+              <Transition kind="strong" scadeDest="Initial" targetName="SSM_TR_WaintingForNegPulse_Initial_3_WaintingForNegPulse_SM1"/>
+            </Fork>
+          </State>
+          <NextState inCtx="true" mem="true" targetName="SM1_state_nxt_PositionProcessor_2"/>
+        </Automaton>
+      </NodeInlining>
+      <NodeInlining instName="2" scadeName="ActuatorModule">
+        <Output inCtx="true" scadeName="setDirection" scadeType="Direction" targetName="setDirection_ActuatorModule_2" targetType="Direction"/>
+        <Automaton scadeName="SM1" targetStatesType="SSM_ST_SM1" targetTransitionsType="SSM_TR_SM1">
+          <State scadeName="Initial" targetName="SSM_st_Initial_SM1">
+            <Fork priority="1">
+              <Condition/>
+              <Transition kind="strong" scadeDest="MoveUp" targetName="SSM_TR_Initial_MoveUp_1_Initial_SM1"/>
+            </Fork>
+            <Fork priority="2">
+              <Condition/>
+              <Transition kind="strong" scadeDest="MoveDown" targetName="SSM_TR_Initial_MoveDown_2_Initial_SM1"/>
+            </Fork>
+            <Fork priority="3">
+              <Condition/>
+              <Transition kind="strong" scadeDest="StopMotor" targetName="SSM_TR_Initial_StopMotor_3_Initial_SM1"/>
+            </Fork>
+          </State>
+          <State scadeName="MoveUp" targetName="SSM_st_MoveUp_SM1"/>
+          <State scadeName="MoveDown" targetName="SSM_st_MoveDown_SM1"/>
+          <State scadeName="StopMotor" targetName="SSM_st_StopMotor_SM1"/>
+          <NextState inCtx="true" mem="true" targetName="SM1_state_nxt_ActuatorModule_2"/>
+        </Automaton>
+      </NodeInlining>
+      <FbyOp instName="1">
+        <Memory inCtx="true" targetName="_L52" targetType="kcg_int16"/>
+      </FbyOp>
+      <FbyOp instName="3">
+        <Memory inCtx="true" targetName="_L54" targetType="kcg_int16"/>
+      </FbyOp>
+      <FbyOp instName="5">
+        <Init inCtx="true" targetName="init10" targetType="kcg_bool"/>
+        <Memory inCtx="true" targetName="_L52" targetType="kcg_int16"/>
+      </FbyOp>
+      <FbyOp instName="6">
+        <Memory inCtx="true" targetName="_L55" targetType="kcg_int8"/>
+      </FbyOp>
+      <FbyOp instName="8">
+        <Memory inCtx="true" targetName="_L56" targetType="kcg_int8"/>
+      </FbyOp>
+      <Memory inCtx="true" targetName="_L55" targetType="kcg_int8"/>
+      <Memory inCtx="true" targetName="_L56" targetType="kcg_int8"/>
+      <Memory inCtx="true" targetName="_L52" targetType="kcg_int16"/>
+      <Memory inCtx="true" targetName="_L54" targetType="kcg_int16"/>
+      <Memory inCtx="true" targetName="SM1_state_nxt_ActuatorModule_2" targetType="SSM_ST_SM1"/>
+      <Memory inCtx="true" targetName="setDirection_ActuatorModule_2" targetType="Direction"/>
+      <Memory inCtx="true" targetName="_L1_Counter_2_PositionProcessor_2" targetType="kcg_int16"/>
+      <Memory inCtx="true" targetName="_L1_Counter_3_PositionProcessor_2" targetType="kcg_int16"/>
+      <Memory inCtx="true" targetName="SM1_state_nxt_PositionProcessor_2" targetType="_2_SSM_ST_SM1"/>
+      <Memory inCtx="true" targetName="x_PositionProcessor_2" targetType="kcg_int16"/>
+      <Memory inCtx="true" targetName="PulseCount_PositionProcessor_2" targetType="kcg_int16"/>
+      <Memory inCtx="true" targetName="Timer_PositionProcessor_2" targetType="kcg_int16"/>
+      <Memory inCtx="true" targetName="setDirection_PositionProcessor_2" targetType="Direction"/>
+      <Memory inCtx="true" targetName="Position_PositionProcessor_2" targetType="kcg_int16"/>
+      <Memory inCtx="true" targetName="_L1_Counter_6_SafetyModule_2" targetType="kcg_int16"/>
+      <Memory inCtx="true" targetName="_L1_Counter_17_SafetyModule_2" targetType="kcg_int16"/>
+      <Memory inCtx="true" targetName="SM1_state_nxt_SafetyModule_2" targetType="_4_SSM_ST_SM1"/>
+      <Memory inCtx="true" targetName="SafetyViolation_SafetyModule_2" targetType="kcg_bool"/>
+      <Memory inCtx="true" targetName="timer_SafetyModule_2" targetType="kcg_int16"/>
+      <Memory inCtx="true" targetName="StopTimer_SafetyModule_2" targetType="kcg_int16"/>
+      <Memory inCtx="true" targetName="PlanningModule_state_nxt_PlanningModule_2" targetType="SSM_ST_PlanningModule"/>
+      <Memory inCtx="true" targetName="SM2_state_nxt_PlanningModule_2" targetType="SSM_ST_SM2"/>
+      <Memory inCtx="true" targetName="F1BS_PlanningModule_2" targetType="kcg_bool"/>
+      <Memory inCtx="true" targetName="F2BS_PlanningModule_2" targetType="kcg_bool"/>
+      <Memory inCtx="true" targetName="F3BS_PlanningModule_2" targetType="kcg_bool"/>
+      <Memory inCtx="true" targetName="F1BR_PlanningModule_2" targetType="kcg_bool"/>
+      <Memory inCtx="true" targetName="F2BR_PlanningModule_2" targetType="kcg_bool"/>
+      <Memory inCtx="true" targetName="F3BR_PlanningModule_2" targetType="kcg_bool"/>
+      <Memory inCtx="true" targetName="_L1_Counter_11_ButtonProcessor_2" targetType="kcg_int16"/>
+      <Memory inCtx="true" targetName="_L1_Counter_12_ButtonProcessor_2" targetType="kcg_int16"/>
+      <Memory inCtx="true" targetName="_L1_Counter_13_ButtonProcessor_2" targetType="kcg_int16"/>
+      <Memory inCtx="true" targetName="_L1_Counter_14_ButtonProcessor_2" targetType="kcg_int16"/>
+      <Memory inCtx="true" targetName="_L1_Counter_15_ButtonProcessor_2" targetType="kcg_int16"/>
+      <Memory inCtx="true" targetName="_L1_Counter_16_ButtonProcessor_2" targetType="kcg_int16"/>
+      <Memory inCtx="true" targetName="SM2_state_nxt_ButtonProcessor_2" targetType="_8_SSM_ST_SM2"/>
+      <Memory inCtx="true" targetName="SM3_state_nxt_ButtonProcessor_2" targetType="SSM_ST_SM3"/>
+      <Memory inCtx="true" targetName="SM4_state_nxt_ButtonProcessor_2" targetType="SSM_ST_SM4"/>
+      <Memory inCtx="true" targetName="SM1_state_nxt_ButtonProcessor_2" targetType="_10_SSM_ST_SM1"/>
+      <Memory inCtx="true" targetName="SM5_state_nxt_ButtonProcessor_2" targetType="SSM_ST_SM5"/>
+      <Memory inCtx="true" targetName="SM6_state_nxt_ButtonProcessor_2" targetType="SSM_ST_SM6"/>
+      <Memory inCtx="true" targetName="Timer0_ButtonProcessor_2" targetType="kcg_int16"/>
+      <Memory inCtx="true" targetName="Timer1_ButtonProcessor_2" targetType="kcg_int16"/>
+      <Memory inCtx="true" targetName="Timer2_ButtonProcessor_2" targetType="kcg_int16"/>
+      <Memory inCtx="true" targetName="Timer3_ButtonProcessor_2" targetType="kcg_int16"/>
+      <Memory inCtx="true" targetName="Timer4_ButtonProcessor_2" targetType="kcg_int16"/>
+      <Memory inCtx="true" targetName="Timer5_ButtonProcessor_2" targetType="kcg_int16"/>
+      <Init inCtx="true" targetName="init10" targetType="kcg_bool"/>
+      <OutCtxType targetName="outC_ControlSystem"/>
+      <InCtxType targetName="inC_ControlSystem"/>
+    </RootNode>
+    <ExpNode scadeName="ButtonProcessor"/>
+    <ExpNode scadeName="Counter"/>
+    <ExpNode scadeName="PlanningModule"/>
+    <ExpNode scadeName="SafetyModule"/>
+    <ExpNode scadeName="FloorsLocation"/>
+    <ExpNode scadeName="PositionProcessor"/>
+    <ExpNode scadeName="ActuatorModule"/>
+    <PredefType scadeName="int8" targetName="kcg_int8"/>
+    <PredefType scadeName="int16" targetName="kcg_int16"/>
+    <PredefType scadeName="int32" targetName="kcg_int32"/>
+    <PredefType scadeName="int64" targetName="kcg_int64"/>
+    <PredefType scadeName="uint8" targetName="kcg_uint8"/>
+    <PredefType scadeName="uint16" targetName="kcg_uint16"/>
+    <PredefType scadeName="uint32" targetName="kcg_uint32"/>
+    <PredefType scadeName="uint64" targetName="kcg_uint64"/>
+    <PredefType scadeName="size" targetName="kcg_size"/>
+    <PredefType scadeName="float32" targetName="kcg_float32"/>
+    <PredefType scadeName="float64" targetName="kcg_float64"/>
+    <PredefType scadeName="bool" targetName="kcg_bool"/>
+    <PredefType scadeName="char" targetName="kcg_char"/>
+  </Model>

@@ -1,0 +1,1299 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--$********** SCADE Suite KCG 32-bit 6.6.2 (build i4) **********
+** Command: kcg662.exe -config C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/KCG/config.txt
+** Generation date: 2022-02-25T19:14:34
+*************************************************************$-->
+<mapping>
+  <config>
+    <option name="use_types" value="#off#"/>
+    <option name="imported_root_package" value="#off#"/>
+    <option name="root_package" value="#off#"/>
+    <option name="xml_basename" value="kcg_xml_filter_out.scade"/>
+    <option name="state_vector" value="#off#"/>
+    <option name="static" value="#off#"/>
+    <option name="separate_io_all" value="#off#"/>
+    <option name="no_separate_io" value="#off#"/>
+    <option name="separate_io" value="#off#"/>
+    <option name="warn_error" value="#off#"/>
+    <option name="short_circuit" value="#off#"/>
+    <option name="wrap_c_ops" value="#off#"/>
+    <option name="input_file"
+        value="C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/KCG/scade_model_without_unused.scade"/>
+    <option name="probes" value="#off#"/>
+    <option name="debug" value="#off#"/>
+    <option name="no_observe" value="#off#"/>
+    <option name="observe" value="#off#"/>
+    <option name="user_config" value="./user_macros.h"/>
+    <option name="input_threshold" value="#off#"/>
+    <option name="header" value="#off#"/>
+    <option name="significance_length" value="31"/>
+    <option name="name_length" value="200"/>
+    <option name="globals_prefix" value="#off#"/>
+    <option name="keep_asserts" value="#off#"/>
+    <option name="global_root_context" value="#off#"/>
+    <option name="noexp" value="#off#"/>
+    <option name="exp" value="#off#"/>
+    <option name="expall" value="#on#"/>
+    <option name="target_dir"
+        value="C:/Users/DarkLord/OneDrive/MASTER/E-Books/Semester 1/Design and Analysis of Embedded Realtime Systems/Assignments/Final Project/Elevator Control System/KCG"/>
+    <option name="target" value="C"/>
+    <option name="root" value="ControlSystem"/>
+    <option name="auth" value="#off#"/>
+  </config>
+  <model>
+    <predefType id="1" name="bool"/>
+    <predefType id="2" name="char"/>
+    <predefType id="3" name="int8"/>
+    <predefType id="4" name="int16"/>
+    <predefType id="5" name="int32"/>
+    <predefType id="6" name="int64"/>
+    <predefType id="7" name="uint8"/>
+    <predefType id="8" name="uint16"/>
+    <predefType id="9" name="uint32"/>
+    <predefType id="10" name="uint64"/>
+    <predefType id="11" name="float32"/>
+    <predefType id="12" name="float64"/>
+    <predefType id="13" name="size"/>
+    <enum id="14" name="PDirection">
+      <value id="15" name="Upward" default="false"/>
+      <value id="16" name="Downward" default="false"/>
+      <value id="17" name="Stop" default="false"/>
+    </enum>
+    <enum id="18" name="Direction">
+      <value id="19" name="Up" default="false"/>
+      <value id="20" name="Down" default="false"/>
+      <value id="21" name="None" default="false"/>
+    </enum>
+    <operator id="22" name="ControlSystem" imported="false" root="true" expanded="false">
+      <input id="23" name="GPIOC0" clock="false" type="1"/>
+      <input id="24" name="GPIOC1" clock="false" type="1"/>
+      <input id="25" name="GPIOC2" clock="false" type="1"/>
+      <input id="26" name="GPIOC3" clock="false" type="1"/>
+      <input id="27" name="GPIOC8" clock="false" type="1"/>
+      <input id="28" name="GPIOC7" clock="false" type="1"/>
+      <input id="29" name="GPIOC9" clock="false" type="1"/>
+      <output id="30" name="Channel1" clock="false" type="3"/>
+      <output id="31" name="Channel2" clock="false" type="3"/>
+      <instance id="32" name="2" op="400" expanded="true">
+        <input id="33" name="GPIOC0" clock="false" type="1"/>
+        <input id="34" name="GPIOC1" clock="false" type="1"/>
+        <input id="35" name="GPIOC2" clock="false" type="1"/>
+        <input id="36" name="GPIOC3" clock="false" type="1"/>
+        <input id="37" name="GPIOC8" clock="false" type="1"/>
+        <input id="38" name="GPIOC7" clock="false" type="1"/>
+        <output id="39" name="Press0" clock="false" type="1"/>
+        <output id="40" name="Press1" clock="false" type="1"/>
+        <output id="41" name="Press2" clock="false" type="1"/>
+        <output id="42" name="Press3" clock="false" type="1"/>
+        <output id="43" name="Press7" clock="false" type="1"/>
+        <output id="44" name="Press8" clock="false" type="1"/>
+        <automaton id="45" name="SM2">
+          <state id="46" name="Floor1Button10" initial="true" final="false" default="false">
+            <fork id="47" name="1" kind="strong">
+              <transition id="48" dest="52"/>
+            </fork>
+          </state>
+          <state id="49" name="Floor1Button11" initial="false" final="false" default="false">
+            <fork id="50" name="1" kind="strong">
+              <transition id="51" dest="46"/>
+            </fork>
+          </state>
+          <state id="52" name="Floor1Button4" initial="false" final="false" default="false">
+            <instance id="53" name="11" op="401" expanded="true">
+              <output id="54" name="Output" clock="false" type="4"/>
+              <last id="55"/>
+            </instance>
+            <fork id="56" name="1" kind="strong">
+              <last id="57"/>
+              <transition id="58" dest="49"/>
+            </fork>
+            <fork id="59" name="2" kind="strong">
+              <transition id="60" dest="46"/>
+            </fork>
+          </state>
+        </automaton>
+        <automaton id="61" name="SM3">
+          <state id="62" name="Floor1Button10" initial="true" final="false" default="false">
+            <fork id="63" name="1" kind="strong">
+              <transition id="64" dest="68"/>
+            </fork>
+          </state>
+          <state id="65" name="Floor1Button11" initial="false" final="false" default="false">
+            <fork id="66" name="1" kind="strong">
+              <transition id="67" dest="62"/>
+            </fork>
+          </state>
+          <state id="68" name="Floor1Button4" initial="false" final="false" default="false">
+            <instance id="69" name="12" op="401" expanded="true">
+              <output id="70" name="Output" clock="false" type="4"/>
+              <last id="71"/>
+            </instance>
+            <fork id="72" name="1" kind="strong">
+              <last id="73"/>
+              <transition id="74" dest="65"/>
+            </fork>
+            <fork id="75" name="2" kind="strong">
+              <transition id="76" dest="62"/>
+            </fork>
+          </state>
+        </automaton>
+        <automaton id="77" name="SM4">
+          <state id="78" name="Floor1Button10" initial="true" final="false" default="false">
+            <fork id="79" name="1" kind="strong">
+              <transition id="80" dest="84"/>
+            </fork>
+          </state>
+          <state id="81" name="Floor1Button11" initial="false" final="false" default="false">
+            <fork id="82" name="1" kind="strong">
+              <transition id="83" dest="78"/>
+            </fork>
+          </state>
+          <state id="84" name="Floor1Button4" initial="false" final="false" default="false">
+            <instance id="85" name="13" op="401" expanded="true">
+              <output id="86" name="Output" clock="false" type="4"/>
+              <last id="87"/>
+            </instance>
+            <fork id="88" name="1" kind="strong">
+              <last id="89"/>
+              <transition id="90" dest="81"/>
+            </fork>
+            <fork id="91" name="2" kind="strong">
+              <transition id="92" dest="78"/>
+            </fork>
+          </state>
+        </automaton>
+        <automaton id="93" name="SM1">
+          <state id="94" name="Floor1Button10" initial="true" final="false" default="false">
+            <fork id="95" name="1" kind="strong">
+              <transition id="96" dest="100"/>
+            </fork>
+          </state>
+          <state id="97" name="Floor1Button11" initial="false" final="false" default="false">
+            <fork id="98" name="1" kind="strong">
+              <transition id="99" dest="94"/>
+            </fork>
+          </state>
+          <state id="100" name="Floor1Button4" initial="false" final="false" default="false">
+            <instance id="101" name="14" op="401" expanded="true">
+              <output id="102" name="Output" clock="false" type="4"/>
+              <last id="103"/>
+            </instance>
+            <fork id="104" name="1" kind="strong">
+              <last id="105"/>
+              <transition id="106" dest="97"/>
+            </fork>
+            <fork id="107" name="2" kind="strong">
+              <transition id="108" dest="94"/>
+            </fork>
+          </state>
+        </automaton>
+        <automaton id="109" name="SM5">
+          <state id="110" name="Floor1Button10" initial="true" final="false" default="false">
+            <fork id="111" name="1" kind="strong">
+              <transition id="112" dest="116"/>
+            </fork>
+          </state>
+          <state id="113" name="Floor1Button11" initial="false" final="false" default="false">
+            <fork id="114" name="1" kind="strong">
+              <transition id="115" dest="110"/>
+            </fork>
+          </state>
+          <state id="116" name="Floor1Button4" initial="false" final="false" default="false">
+            <instance id="117" name="15" op="401" expanded="true">
+              <output id="118" name="Output" clock="false" type="4"/>
+              <last id="119"/>
+            </instance>
+            <fork id="120" name="1" kind="strong">
+              <last id="121"/>
+              <transition id="122" dest="113"/>
+            </fork>
+            <fork id="123" name="2" kind="strong">
+              <transition id="124" dest="110"/>
+            </fork>
+          </state>
+        </automaton>
+        <automaton id="125" name="SM6">
+          <state id="126" name="Floor1Button10" initial="true" final="false" default="false">
+            <fork id="127" name="1" kind="strong">
+              <transition id="128" dest="132"/>
+            </fork>
+          </state>
+          <state id="129" name="Floor1Button11" initial="false" final="false" default="false">
+            <fork id="130" name="1" kind="strong">
+              <transition id="131" dest="126"/>
+            </fork>
+          </state>
+          <state id="132" name="Floor1Button4" initial="false" final="false" default="false">
+            <instance id="133" name="16" op="401" expanded="true">
+              <output id="134" name="Output" clock="false" type="4"/>
+              <last id="135"/>
+            </instance>
+            <fork id="136" name="1" kind="strong">
+              <last id="137"/>
+              <transition id="138" dest="129"/>
+            </fork>
+            <fork id="139" name="2" kind="strong">
+              <transition id="140" dest="126"/>
+            </fork>
+          </state>
+        </automaton>
+      </instance>
+      <instance id="141" name="2" op="402" expanded="true">
+        <input id="142" name="Press0" clock="false" type="1"/>
+        <input id="143" name="Press1" clock="false" type="1"/>
+        <input id="144" name="Press2" clock="false" type="1"/>
+        <input id="145" name="Press3" clock="false" type="1"/>
+        <input id="146" name="Press7" clock="false" type="1"/>
+        <input id="147" name="Press8" clock="false" type="1"/>
+        <input id="148" name="Position" clock="false" type="4"/>
+        <output id="149" name="CarMotorStop" clock="false" type="1"/>
+        <output id="150" name="Doors" clock="false" type="1"/>
+        <output id="151" name="AtFloor" clock="false" type="1"/>
+        <output id="152" name="Move" clock="false" type="14"/>
+        <automaton id="153" name="PlanningModule">
+          <state id="154" name="Floor1" initial="true" final="false" default="false">
+            <fork id="155" name="1" kind="strong">
+              <last id="156"/>
+              <transition id="157" dest="161"/>
+            </fork>
+            <fork id="158" name="2" kind="strong">
+              <last id="159"/>
+              <transition id="160" dest="181"/>
+            </fork>
+          </state>
+          <state id="161" name="Movin1To2" initial="false" final="false" default="false">
+            <fork id="162" name="1" kind="strong">
+              <transition id="163" dest="161"/>
+            </fork>
+            <fork id="164" name="2" kind="strong">
+              <transition id="165" dest="168"/>
+            </fork>
+            <fork id="166" name="3" kind="strong">
+              <transition id="167" dest="218"/>
+            </fork>
+          </state>
+          <state id="168" name="Floor2" initial="false" final="false" default="false">
+            <fork id="169" name="1" kind="strong">
+              <last id="170"/>
+              <transition id="171" dest="188"/>
+            </fork>
+            <fork id="172" name="2" kind="strong">
+              <transition id="173" dest="211"/>
+            </fork>
+          </state>
+          <state id="174" name="Floor3" initial="false" final="false" default="false">
+            <fork id="175" name="1" kind="strong">
+              <last id="176"/>
+              <transition id="177" dest="195"/>
+            </fork>
+            <fork id="178" name="2" kind="strong">
+              <last id="179"/>
+              <transition id="180" dest="204"/>
+            </fork>
+          </state>
+          <state id="181" name="Movin1To3" initial="false" final="false" default="false">
+            <fork id="182" name="1" kind="strong">
+              <transition id="183" dest="174"/>
+            </fork>
+            <fork id="184" name="2" kind="strong">
+              <transition id="185" dest="181"/>
+            </fork>
+            <fork id="186" name="3" kind="strong">
+              <transition id="187" dest="161"/>
+            </fork>
+          </state>
+          <state id="188" name="Moving2To3" initial="false" final="false" default="false">
+            <fork id="189" name="1" kind="strong">
+              <transition id="190" dest="174"/>
+            </fork>
+            <fork id="191" name="2" kind="strong">
+              <transition id="192" dest="188"/>
+            </fork>
+            <fork id="193" name="3" kind="strong">
+              <transition id="194" dest="218"/>
+            </fork>
+          </state>
+          <state id="195" name="Moving3To1" initial="false" final="false" default="false">
+            <fork id="196" name="1" kind="strong">
+              <transition id="197" dest="154"/>
+            </fork>
+            <fork id="198" name="2" kind="strong">
+              <transition id="199" dest="195"/>
+            </fork>
+            <fork id="200" name="3" kind="strong">
+              <transition id="201" dest="204"/>
+            </fork>
+            <fork id="202" name="4" kind="strong">
+              <transition id="203" dest="218"/>
+            </fork>
+          </state>
+          <state id="204" name="Moving3To2" initial="false" final="false" default="false">
+            <fork id="205" name="1" kind="strong">
+              <transition id="206" dest="168"/>
+            </fork>
+            <fork id="207" name="2" kind="strong">
+              <transition id="208" dest="204"/>
+            </fork>
+            <fork id="209" name="3" kind="strong">
+              <transition id="210" dest="218"/>
+            </fork>
+          </state>
+          <state id="211" name="Movin2To1" initial="false" final="false" default="false">
+            <fork id="212" name="1" kind="strong">
+              <transition id="213" dest="154"/>
+            </fork>
+            <fork id="214" name="2" kind="strong">
+              <transition id="215" dest="211"/>
+            </fork>
+            <fork id="216" name="3" kind="strong">
+              <transition id="217" dest="218"/>
+            </fork>
+          </state>
+          <state id="218" name="Stop" initial="false" final="false" default="false"/>
+        </automaton>
+        <automaton id="219" name="SM2">
+          <state id="220" name="State11" initial="true" final="false" default="false">
+            <fork id="221" name="1" kind="strong">
+              <transition id="222" dest="227"/>
+            </fork>
+            <fork id="223" name="2" kind="strong">
+              <transition id="224" dest="230"/>
+            </fork>
+            <fork id="225" name="3" kind="strong">
+              <transition id="226" dest="233"/>
+            </fork>
+          </state>
+          <state id="227" name="State12" initial="false" final="false" default="false">
+            <fork id="228" name="1" kind="strong">
+              <transition id="229" dest="245"/>
+            </fork>
+          </state>
+          <state id="230" name="State13" initial="false" final="false" default="false">
+            <fork id="231" name="1" kind="strong">
+              <transition id="232" dest="245"/>
+            </fork>
+          </state>
+          <state id="233" name="State14" initial="false" final="false" default="false">
+            <fork id="234" name="1" kind="strong">
+              <transition id="235" dest="245"/>
+            </fork>
+          </state>
+          <state id="236" name="State17" initial="false" final="false" default="false">
+            <fork id="237" name="1" kind="strong">
+              <transition id="238" dest="220"/>
+            </fork>
+          </state>
+          <state id="239" name="State16" initial="false" final="false" default="false">
+            <fork id="240" name="1" kind="strong">
+              <transition id="241" dest="220"/>
+            </fork>
+          </state>
+          <state id="242" name="State15" initial="false" final="false" default="false">
+            <fork id="243" name="1" kind="strong">
+              <transition id="244" dest="220"/>
+            </fork>
+          </state>
+          <state id="245" name="State18" initial="false" final="false" default="false">
+            <fork id="246" name="1" kind="strong">
+              <transition id="247" dest="239"/>
+            </fork>
+            <fork id="248" name="2" kind="strong">
+              <transition id="249" dest="236"/>
+            </fork>
+            <fork id="250" name="3" kind="strong">
+              <transition id="251" dest="242"/>
+            </fork>
+          </state>
+        </automaton>
+      </instance>
+      <instance id="252" name="2" op="403" expanded="true">
+        <input id="253" name="Channel1" clock="false" type="3"/>
+        <input id="254" name="Channel2" clock="false" type="3"/>
+        <input id="255" name="Position" clock="false" type="4"/>
+        <input id="256" name="Press3" clock="false" type="1"/>
+        <input id="257" name="AtFloor" clock="false" type="1"/>
+        <input id="258" name="Doors" clock="false" type="1"/>
+        <input id="259" name="Speed" clock="false" type="4"/>
+        <output id="260" name="CarMotorStop" clock="false" type="1"/>
+        <automaton id="261" name="SM1">
+          <state id="262" name="NormalMode" initial="true" final="false" default="false">
+            <instance id="263" name="6" op="401" expanded="true">
+              <output id="264" name="Output" clock="false" type="4"/>
+              <last id="265"/>
+            </instance>
+            <fork id="266" name="1" kind="strong">
+              <last id="267"/>
+              <transition id="268" dest="304"/>
+            </fork>
+            <fork id="269" name="2" kind="strong">
+              <last id="270"/>
+              <transition id="271" dest="308"/>
+            </fork>
+            <fork id="272" name="3" kind="strong">
+              <last id="273"/>
+              <transition id="274" dest="305"/>
+            </fork>
+            <fork id="275" name="4" kind="strong">
+              <last id="276"/>
+              <transition id="277" dest="295"/>
+            </fork>
+            <fork id="278" name="5" kind="strong">
+              <last id="279"/>
+              <transition id="280" dest="294"/>
+            </fork>
+            <fork id="281" name="6" kind="strong">
+              <last id="282"/>
+              <transition id="283" dest="296"/>
+            </fork>
+            <fork id="284" name="7" kind="strong">
+              <last id="285"/>
+              <transition id="286" dest="297"/>
+            </fork>
+            <fork id="287" name="8" kind="strong">
+              <last id="288"/>
+              <transition id="289" dest="293"/>
+            </fork>
+            <fork id="290" name="9" kind="strong">
+              <last id="291"/>
+              <transition id="292" dest="295"/>
+            </fork>
+          </state>
+          <state id="293" name="Environment1" initial="false" final="false" default="false"/>
+          <state id="294" name="Safety2" initial="false" final="false" default="false"/>
+          <state id="295" name="Safety4" initial="false" final="false" default="false"/>
+          <state id="296" name="Safety3" initial="false" final="false" default="false"/>
+          <state id="297" name="Safety1PC" initial="false" final="false" default="false">
+            <instance id="298" name="17" op="401" expanded="true">
+              <output id="299" name="Output" clock="false" type="4"/>
+              <last id="300"/>
+            </instance>
+            <fork id="301" name="1" kind="strong">
+              <last id="302"/>
+              <transition id="303" dest="307"/>
+            </fork>
+          </state>
+          <state id="304" name="Safety5" initial="false" final="false" default="false"/>
+          <state id="305" name="Environment2" initial="false" final="false" default="false"/>
+          <state id="306" name="Environment3" initial="false" final="false" default="false"/>
+          <state id="307" name="Safety1" initial="false" final="false" default="false"/>
+          <state id="308" name="Environment3PC" initial="false" final="false" default="false">
+            <instance id="309" name="1" op="404" expanded="true">
+              <input id="310" name="GPIOC7" clock="false" type="1"/>
+              <input id="311" name="Position" clock="false" type="4"/>
+              <output id="312" name="SafetyViolation" clock="false" type="1"/>
+              <automaton id="313" name="SM1">
+                <state id="314" name="State1" initial="true" final="false" default="false"/>
+              </automaton>
+            </instance>
+            <fork id="315" name="1" kind="strong">
+              <last id="316"/>
+              <transition id="317" dest="262"/>
+            </fork>
+            <fork id="318" name="2" kind="strong">
+              <last id="319"/>
+              <transition id="320" dest="306"/>
+            </fork>
+          </state>
+        </automaton>
+      </instance>
+      <instance id="321" name="2" op="405" expanded="true">
+        <input id="322" name="setDirection" clock="false" type="18"/>
+        <input id="323" name="GPIOC9" clock="false" type="1"/>
+        <output id="324" name="Position" clock="false" type="4"/>
+        <output id="325" name="Speed" clock="false" type="4"/>
+        <automaton id="326" name="SM1">
+          <state id="327" name="MovingUp" initial="false" final="false" default="false">
+            <last id="328"/>
+            <fork id="329" name="1" kind="strong">
+              <last id="330"/>
+              <transition id="331" dest="361"/>
+            </fork>
+            <fork id="332" name="2" kind="strong">
+              <last id="333"/>
+              <transition id="334" dest="365"/>
+            </fork>
+          </state>
+          <state id="335" name="MovingUp1" initial="false" final="false" default="false">
+            <last id="336"/>
+            <fork id="337" name="1" kind="strong">
+              <transition id="338" dest="361"/>
+            </fork>
+            <fork id="339" name="2" kind="strong">
+              <last id="340"/>
+              <transition id="341" dest="365"/>
+            </fork>
+          </state>
+          <state id="342" name="State4" initial="false" final="false" default="false">
+            <instance id="343" name="2" op="401" expanded="true">
+              <output id="344" name="Output" clock="false" type="4"/>
+              <last id="345"/>
+            </instance>
+            <fork id="346" name="1" kind="strong">
+              <last id="347"/>
+              <last id="348"/>
+              <transition id="349" dest="335"/>
+            </fork>
+            <fork id="350" name="2" kind="strong">
+              <last id="351"/>
+              <last id="352"/>
+              <transition id="353" dest="327"/>
+            </fork>
+            <fork id="354" name="3" kind="strong">
+              <last id="355"/>
+              <transition id="356" dest="342"/>
+              <last id="357"/>
+            </fork>
+            <fork id="358" name="4" kind="strong">
+              <last id="359"/>
+              <transition id="360" dest="361"/>
+            </fork>
+          </state>
+          <state id="361" name="Initial" initial="true" final="false" default="false">
+            <fork id="362" name="1" kind="strong">
+              <last id="363"/>
+              <transition id="364" dest="342"/>
+            </fork>
+          </state>
+          <state id="365" name="WaintingForNegPulse" initial="false" final="false" default="false">
+            <instance id="366" name="3" op="401" expanded="true">
+              <output id="367" name="Output" clock="false" type="4"/>
+              <last id="368"/>
+            </instance>
+            <fork id="369" name="1" kind="strong">
+              <last id="370"/>
+              <transition id="371" dest="342"/>
+            </fork>
+            <fork id="372" name="2" kind="strong">
+              <last id="373"/>
+              <transition id="374" dest="365"/>
+            </fork>
+            <fork id="375" name="3" kind="strong">
+              <last id="376"/>
+              <transition id="377" dest="361"/>
+            </fork>
+          </state>
+        </automaton>
+      </instance>
+      <instance id="378" name="2" op="406" expanded="true">
+        <input id="379" name="Move" clock="false" type="14"/>
+        <input id="380" name="CarMotorStop" clock="false" type="1"/>
+        <output id="381" name="Channel1" clock="false" type="3"/>
+        <output id="382" name="Channel2" clock="false" type="3"/>
+        <output id="383" name="setDirection" clock="false" type="18"/>
+        <automaton id="384" name="SM1">
+          <state id="385" name="Initial" initial="true" final="false" default="false">
+            <fork id="386" name="1" kind="strong">
+              <transition id="387" dest="392"/>
+            </fork>
+            <fork id="388" name="2" kind="strong">
+              <transition id="389" dest="393"/>
+            </fork>
+            <fork id="390" name="3" kind="strong">
+              <transition id="391" dest="394"/>
+            </fork>
+          </state>
+          <state id="392" name="MoveUp" initial="false" final="false" default="false"/>
+          <state id="393" name="MoveDown" initial="false" final="false" default="false"/>
+          <state id="394" name="StopMotor" initial="false" final="false" default="false"/>
+        </automaton>
+      </instance>
+      <fby id="395" name="1"/>
+      <fby id="396" name="3"/>
+      <fby id="397" name="5"/>
+      <fby id="398" name="6"/>
+      <fby id="399" name="8"/>
+    </operator>
+    <operator id="400" name="ButtonProcessor" imported="false" root="false" expanded="true"/>
+    <operator id="401" name="Counter" imported="false" root="false" expanded="true"/>
+    <operator id="402" name="PlanningModule" imported="false" root="false" expanded="true"/>
+    <operator id="403" name="SafetyModule" imported="false" root="false" expanded="true"/>
+    <operator id="404" name="FloorsLocation" imported="false" root="false" expanded="true"/>
+    <operator id="405" name="PositionProcessor" imported="false" root="false" expanded="true"/>
+    <operator id="406" name="ActuatorModule" imported="false" root="false" expanded="true"/>
+  </model>
+  <generated>
+    <c>
+      <file id="407" name="ControlSystem.h">
+        <function id="408" name="ControlSystem_init">
+          <parameter id="409" name="outC" type="415" pointer="true"/>
+        </function>
+        <function id="410" name="ControlSystem_reset">
+          <parameter id="411" name="outC" type="415" pointer="true"/>
+        </function>
+        <function id="412" name="ControlSystem">
+          <parameter id="413" name="inC" type="475" pointer="true"/>
+          <parameter id="414" name="outC" type="415" pointer="true"/>
+        </function>
+        <struct id="415" name="outC_ControlSystem">
+          <field id="416" name="Channel1" type="696" pointer="false"/>
+          <field id="417" name="Channel2" type="696" pointer="false"/>
+          <field id="418" name="_L55" type="696" pointer="false"/>
+          <field id="419" name="_L56" type="696" pointer="false"/>
+          <field id="420" name="_L52" type="697" pointer="false"/>
+          <field id="421" name="_L54" type="697" pointer="false"/>
+          <field id="422" name="SM1_state_nxt_ActuatorModule_2" type="484" pointer="false"/>
+          <field id="423" name="setDirection_ActuatorModule_2" type="669" pointer="false"/>
+          <field id="424" name="_L1_Counter_2_PositionProcessor_2" type="697" pointer="false"/>
+          <field id="425" name="_L1_Counter_3_PositionProcessor_2" type="697" pointer="false"/>
+          <field id="426" name="SM1_state_nxt_PositionProcessor_2" type="494" pointer="false"/>
+          <field id="427" name="x_PositionProcessor_2" type="697" pointer="false"/>
+          <field id="428" name="PulseCount_PositionProcessor_2" type="697" pointer="false"/>
+          <field id="429" name="Timer_PositionProcessor_2" type="697" pointer="false"/>
+          <field id="430" name="setDirection_PositionProcessor_2" type="669" pointer="false"/>
+          <field id="431" name="Position_PositionProcessor_2" type="697" pointer="false"/>
+          <field id="432" name="_L1_Counter_6_SafetyModule_2" type="697" pointer="false"/>
+          <field id="433" name="_L1_Counter_17_SafetyModule_2" type="697" pointer="false"/>
+          <field id="434" name="SM1_state_nxt_SafetyModule_2" type="514" pointer="false"/>
+          <field id="435" name="SafetyViolation_SafetyModule_2" type="707" pointer="false"/>
+          <field id="436" name="timer_SafetyModule_2" type="697" pointer="false"/>
+          <field id="437" name="StopTimer_SafetyModule_2" type="697" pointer="false"/>
+          <field id="438" name="PlanningModule_state_nxt_PlanningModule_2" type="544" pointer="false"/>
+          <field id="439" name="SM2_state_nxt_PlanningModule_2" type="582" pointer="false"/>
+          <field id="440" name="F1BS_PlanningModule_2" type="707" pointer="false"/>
+          <field id="441" name="F2BS_PlanningModule_2" type="707" pointer="false"/>
+          <field id="442" name="F3BS_PlanningModule_2" type="707" pointer="false"/>
+          <field id="443" name="F1BR_PlanningModule_2" type="707" pointer="false"/>
+          <field id="444" name="F2BR_PlanningModule_2" type="707" pointer="false"/>
+          <field id="445" name="F3BR_PlanningModule_2" type="707" pointer="false"/>
+          <field id="446" name="_L1_Counter_11_ButtonProcessor_2" type="697" pointer="false"/>
+          <field id="447" name="_L1_Counter_12_ButtonProcessor_2" type="697" pointer="false"/>
+          <field id="448" name="_L1_Counter_13_ButtonProcessor_2" type="697" pointer="false"/>
+          <field id="449" name="_L1_Counter_14_ButtonProcessor_2" type="697" pointer="false"/>
+          <field id="450" name="_L1_Counter_15_ButtonProcessor_2" type="697" pointer="false"/>
+          <field id="451" name="_L1_Counter_16_ButtonProcessor_2" type="697" pointer="false"/>
+          <field id="452" name="SM2_state_nxt_ButtonProcessor_2" type="605" pointer="false"/>
+          <field id="453" name="SM3_state_nxt_ButtonProcessor_2" type="615" pointer="false"/>
+          <field id="454" name="SM4_state_nxt_ButtonProcessor_2" type="625" pointer="false"/>
+          <field id="455" name="SM1_state_nxt_ButtonProcessor_2" type="635" pointer="false"/>
+          <field id="456" name="SM5_state_nxt_ButtonProcessor_2" type="645" pointer="false"/>
+          <field id="457" name="SM6_state_nxt_ButtonProcessor_2" type="655" pointer="false"/>
+          <field id="458" name="Timer0_ButtonProcessor_2" type="697" pointer="false"/>
+          <field id="459" name="Timer1_ButtonProcessor_2" type="697" pointer="false"/>
+          <field id="460" name="Timer2_ButtonProcessor_2" type="697" pointer="false"/>
+          <field id="461" name="Timer3_ButtonProcessor_2" type="697" pointer="false"/>
+          <field id="462" name="Timer4_ButtonProcessor_2" type="697" pointer="false"/>
+          <field id="463" name="Timer5_ButtonProcessor_2" type="697" pointer="false"/>
+          <field id="464" name="init" type="707" pointer="false"/>
+          <field id="465" name="init1" type="707" pointer="false"/>
+          <field id="466" name="init2" type="707" pointer="false"/>
+          <field id="467" name="init3" type="707" pointer="false"/>
+          <field id="468" name="init4" type="707" pointer="false"/>
+          <field id="469" name="init5" type="707" pointer="false"/>
+          <field id="470" name="init6" type="707" pointer="false"/>
+          <field id="471" name="init7" type="707" pointer="false"/>
+          <field id="472" name="init8" type="707" pointer="false"/>
+          <field id="473" name="init9" type="707" pointer="false"/>
+          <field id="474" name="init10" type="707" pointer="false"/>
+        </struct>
+        <struct id="475" name="inC_ControlSystem">
+          <field id="476" name="GPIOC0" type="707" pointer="false"/>
+          <field id="477" name="GPIOC1" type="707" pointer="false"/>
+          <field id="478" name="GPIOC2" type="707" pointer="false"/>
+          <field id="479" name="GPIOC3" type="707" pointer="false"/>
+          <field id="480" name="GPIOC8" type="707" pointer="false"/>
+          <field id="481" name="GPIOC7" type="707" pointer="false"/>
+          <field id="482" name="GPIOC9" type="707" pointer="false"/>
+        </struct>
+      </file>
+      <file id="483" name="kcg_types.h">
+        <enum id="484" name="SSM_ST_SM1" tagName="kcg_tag_SSM_ST_SM1">
+          <value id="485" name="SSM_st_Initial_SM1"/>
+          <value id="486" name="SSM_st_MoveUp_SM1"/>
+          <value id="487" name="SSM_st_MoveDown_SM1"/>
+          <value id="488" name="SSM_st_StopMotor_SM1"/>
+        </enum>
+        <enum id="489" name="SSM_TR_SM1" tagName="kcg_tag_SSM_TR_SM1">
+          <value id="490" name="SSM_TR_no_trans_SM1"/>
+          <value id="491" name="SSM_TR_Initial_MoveUp_1_Initial_SM1"/>
+          <value id="492" name="SSM_TR_Initial_MoveDown_2_Initial_SM1"/>
+          <value id="493" name="SSM_TR_Initial_StopMotor_3_Initial_SM1"/>
+        </enum>
+        <enum id="494" name="_2_SSM_ST_SM1" tagName="kcg_tag__2_SSM_ST_SM1">
+          <value id="495" name="SSM_st_MovingUp_SM1"/>
+          <value id="496" name="SSM_st_MovingUp1_SM1"/>
+          <value id="497" name="SSM_st_State4_SM1"/>
+          <value id="498" name="_12_SSM_st_Initial_SM1"/>
+          <value id="499" name="SSM_st_WaintingForNegPulse_SM1"/>
+        </enum>
+        <enum id="500" name="_3_SSM_TR_SM1" tagName="kcg_tag__3_SSM_TR_SM1">
+          <value id="501" name="_13_SSM_TR_no_trans_SM1"/>
+          <value id="502" name="SSM_TR_MovingUp_Initial_1_MovingUp_SM1"/>
+          <value id="503" name="SSM_TR_MovingUp_WaintingForNegPulse_2_MovingUp_SM1"/>
+          <value id="504" name="SSM_TR_MovingUp1_Initial_1_MovingUp1_SM1"/>
+          <value id="505" name="SSM_TR_MovingUp1_WaintingForNegPulse_2_MovingUp1_SM1"/>
+          <value id="506" name="SSM_TR_State4_MovingUp1_1_State4_SM1"/>
+          <value id="507" name="SSM_TR_State4_MovingUp_2_State4_SM1"/>
+          <value id="508" name="SSM_TR_State4_State4_3_State4_SM1"/>
+          <value id="509" name="SSM_TR_State4_Initial_4_State4_SM1"/>
+          <value id="510" name="SSM_TR_Initial_State4_1_Initial_SM1"/>
+          <value id="511" name="SSM_TR_WaintingForNegPulse_State4_1_WaintingForNegPulse_SM1"/>
+          <value id="512" name="SSM_TR_WaintingForNegPulse_WaintingForNegPulse_2_WaintingForNegPulse_SM1"/>
+          <value id="513" name="SSM_TR_WaintingForNegPulse_Initial_3_WaintingForNegPulse_SM1"/>
+        </enum>
+        <enum id="514" name="_4_SSM_ST_SM1" tagName="kcg_tag__4_SSM_ST_SM1">
+          <value id="515" name="SSM_st_NormalMode_SM1"/>
+          <value id="516" name="SSM_st_Environment1_SM1"/>
+          <value id="517" name="SSM_st_Safety2_SM1"/>
+          <value id="518" name="SSM_st_Safety4_SM1"/>
+          <value id="519" name="SSM_st_Safety3_SM1"/>
+          <value id="520" name="SSM_st_Safety1PC_SM1"/>
+          <value id="521" name="SSM_st_Safety5_SM1"/>
+          <value id="522" name="SSM_st_Environment2_SM1"/>
+          <value id="523" name="SSM_st_Environment3_SM1"/>
+          <value id="524" name="SSM_st_Safety1_SM1"/>
+          <value id="525" name="SSM_st_Environment3PC_SM1"/>
+        </enum>
+        <enum id="526" name="_5_SSM_TR_SM1" tagName="kcg_tag__5_SSM_TR_SM1">
+          <value id="527" name="_14_SSM_TR_no_trans_SM1"/>
+          <value id="528" name="SSM_TR_NormalMode_Safety5_1_NormalMode_SM1"/>
+          <value id="529" name="SSM_TR_NormalMode_Environment3PC_2_NormalMode_SM1"/>
+          <value id="530" name="SSM_TR_NormalMode_Environment2_3_NormalMode_SM1"/>
+          <value id="531" name="SSM_TR_NormalMode_Safety4_4_NormalMode_SM1"/>
+          <value id="532" name="SSM_TR_NormalMode_Safety2_5_NormalMode_SM1"/>
+          <value id="533" name="SSM_TR_NormalMode_Safety3_6_NormalMode_SM1"/>
+          <value id="534" name="SSM_TR_NormalMode_Safety1PC_7_NormalMode_SM1"/>
+          <value id="535" name="SSM_TR_NormalMode_Environment1_8_NormalMode_SM1"/>
+          <value id="536" name="SSM_TR_NormalMode_Safety4_9_NormalMode_SM1"/>
+          <value id="537" name="SSM_TR_Safety1PC_Safety1_1_Safety1PC_SM1"/>
+          <value id="538" name="SSM_TR_Environment3PC_NormalMode_1_Environment3PC_SM1"/>
+          <value id="539" name="SSM_TR_Environment3PC_Environment3_2_Environment3PC_SM1"/>
+        </enum>
+        <enum id="540" name="_6_SSM_ST_SM1" tagName="kcg_tag__6_SSM_ST_SM1">
+          <value id="541" name="SSM_st_State1_SM1"/>
+        </enum>
+        <enum id="542" name="_7_SSM_TR_SM1" tagName="kcg_tag__7_SSM_TR_SM1">
+          <value id="543" name="_15_SSM_TR_no_trans_SM1"/>
+        </enum>
+        <enum id="544" name="SSM_ST_PlanningModule" tagName="kcg_tag_SSM_ST_PlanningModule">
+          <value id="545" name="SSM_st_Floor1_PlanningModule"/>
+          <value id="546" name="SSM_st_Movin1To2_PlanningModule"/>
+          <value id="547" name="SSM_st_Floor2_PlanningModule"/>
+          <value id="548" name="SSM_st_Floor3_PlanningModule"/>
+          <value id="549" name="SSM_st_Movin1To3_PlanningModule"/>
+          <value id="550" name="SSM_st_Moving2To3_PlanningModule"/>
+          <value id="551" name="SSM_st_Moving3To1_PlanningModule"/>
+          <value id="552" name="SSM_st_Moving3To2_PlanningModule"/>
+          <value id="553" name="SSM_st_Movin2To1_PlanningModule"/>
+          <value id="554" name="SSM_st_Stop_PlanningModule"/>
+        </enum>
+        <enum id="555" name="SSM_TR_PlanningModule" tagName="kcg_tag_SSM_TR_PlanningModule">
+          <value id="556" name="SSM_TR_no_trans_PlanningModule"/>
+          <value id="557" name="SSM_TR_Floor1_Movin1To2_1_Floor1_PlanningModule"/>
+          <value id="558" name="SSM_TR_Floor1_Movin1To3_2_Floor1_PlanningModule"/>
+          <value id="559" name="SSM_TR_Movin1To2_Movin1To2_1_Movin1To2_PlanningModule"/>
+          <value id="560" name="SSM_TR_Movin1To2_Floor2_2_Movin1To2_PlanningModule"/>
+          <value id="561" name="SSM_TR_Movin1To2_Stop_3_Movin1To2_PlanningModule"/>
+          <value id="562" name="SSM_TR_Floor2_Moving2To3_1_Floor2_PlanningModule"/>
+          <value id="563" name="SSM_TR_Floor2_Movin2To1_2_Floor2_PlanningModule"/>
+          <value id="564" name="SSM_TR_Floor3_Moving3To1_1_Floor3_PlanningModule"/>
+          <value id="565" name="SSM_TR_Floor3_Moving3To2_2_Floor3_PlanningModule"/>
+          <value id="566" name="SSM_TR_Movin1To3_Floor3_1_Movin1To3_PlanningModule"/>
+          <value id="567" name="SSM_TR_Movin1To3_Movin1To3_2_Movin1To3_PlanningModule"/>
+          <value id="568" name="SSM_TR_Movin1To3_Movin1To2_3_Movin1To3_PlanningModule"/>
+          <value id="569" name="SSM_TR_Moving2To3_Floor3_1_Moving2To3_PlanningModule"/>
+          <value id="570" name="SSM_TR_Moving2To3_Moving2To3_2_Moving2To3_PlanningModule"/>
+          <value id="571" name="SSM_TR_Moving2To3_Stop_3_Moving2To3_PlanningModule"/>
+          <value id="572" name="SSM_TR_Moving3To1_Floor1_1_Moving3To1_PlanningModule"/>
+          <value id="573" name="SSM_TR_Moving3To1_Moving3To1_2_Moving3To1_PlanningModule"/>
+          <value id="574" name="SSM_TR_Moving3To1_Moving3To2_3_Moving3To1_PlanningModule"/>
+          <value id="575" name="SSM_TR_Moving3To1_Stop_4_Moving3To1_PlanningModule"/>
+          <value id="576" name="SSM_TR_Moving3To2_Floor2_1_Moving3To2_PlanningModule"/>
+          <value id="577" name="SSM_TR_Moving3To2_Moving3To2_2_Moving3To2_PlanningModule"/>
+          <value id="578" name="SSM_TR_Moving3To2_Stop_3_Moving3To2_PlanningModule"/>
+          <value id="579" name="SSM_TR_Movin2To1_Floor1_1_Movin2To1_PlanningModule"/>
+          <value id="580" name="SSM_TR_Movin2To1_Movin2To1_2_Movin2To1_PlanningModule"/>
+          <value id="581" name="SSM_TR_Movin2To1_Stop_3_Movin2To1_PlanningModule"/>
+        </enum>
+        <enum id="582" name="SSM_ST_SM2" tagName="kcg_tag_SSM_ST_SM2">
+          <value id="583" name="SSM_st_State11_SM2"/>
+          <value id="584" name="SSM_st_State12_SM2"/>
+          <value id="585" name="SSM_st_State13_SM2"/>
+          <value id="586" name="SSM_st_State14_SM2"/>
+          <value id="587" name="SSM_st_State17_SM2"/>
+          <value id="588" name="SSM_st_State16_SM2"/>
+          <value id="589" name="SSM_st_State15_SM2"/>
+          <value id="590" name="SSM_st_State18_SM2"/>
+        </enum>
+        <enum id="591" name="SSM_TR_SM2" tagName="kcg_tag_SSM_TR_SM2">
+          <value id="592" name="SSM_TR_no_trans_SM2"/>
+          <value id="593" name="SSM_TR_State11_State12_1_State11_SM2"/>
+          <value id="594" name="SSM_TR_State11_State13_2_State11_SM2"/>
+          <value id="595" name="SSM_TR_State11_State14_3_State11_SM2"/>
+          <value id="596" name="SSM_TR_State12_State18_1_State12_SM2"/>
+          <value id="597" name="SSM_TR_State13_State18_1_State13_SM2"/>
+          <value id="598" name="SSM_TR_State14_State18_1_State14_SM2"/>
+          <value id="599" name="SSM_TR_State17_State11_1_State17_SM2"/>
+          <value id="600" name="SSM_TR_State16_State11_1_State16_SM2"/>
+          <value id="601" name="SSM_TR_State15_State11_1_State15_SM2"/>
+          <value id="602" name="SSM_TR_State18_State16_1_State18_SM2"/>
+          <value id="603" name="SSM_TR_State18_State17_2_State18_SM2"/>
+          <value id="604" name="SSM_TR_State18_State15_3_State18_SM2"/>
+        </enum>
+        <enum id="605" name="_8_SSM_ST_SM2" tagName="kcg_tag__8_SSM_ST_SM2">
+          <value id="606" name="SSM_st_Floor1Button10_SM2"/>
+          <value id="607" name="SSM_st_Floor1Button11_SM2"/>
+          <value id="608" name="SSM_st_Floor1Button4_SM2"/>
+        </enum>
+        <enum id="609" name="_9_SSM_TR_SM2" tagName="kcg_tag__9_SSM_TR_SM2">
+          <value id="610" name="_16_SSM_TR_no_trans_SM2"/>
+          <value id="611" name="SSM_TR_Floor1Button10_Floor1Button4_1_Floor1Button10_SM2"/>
+          <value id="612" name="SSM_TR_Floor1Button11_Floor1Button10_1_Floor1Button11_SM2"/>
+          <value id="613" name="SSM_TR_Floor1Button4_Floor1Button11_1_Floor1Button4_SM2"/>
+          <value id="614" name="_17_SSM_TR_Floor1Button4_Floor1Button10_2_Floor1Button4_SM2"/>
+        </enum>
+        <enum id="615" name="SSM_ST_SM3" tagName="kcg_tag_SSM_ST_SM3">
+          <value id="616" name="SSM_st_Floor1Button10_SM3"/>
+          <value id="617" name="SSM_st_Floor1Button11_SM3"/>
+          <value id="618" name="SSM_st_Floor1Button4_SM3"/>
+        </enum>
+        <enum id="619" name="SSM_TR_SM3" tagName="kcg_tag_SSM_TR_SM3">
+          <value id="620" name="SSM_TR_no_trans_SM3"/>
+          <value id="621" name="_18_SSM_TR_Floor1Button10_Floor1Button4_1_Floor1Button10_SM3"/>
+          <value id="622" name="_19_SSM_TR_Floor1Button11_Floor1Button10_1_Floor1Button11_SM3"/>
+          <value id="623" name="_20_SSM_TR_Floor1Button4_Floor1Button11_1_Floor1Button4_SM3"/>
+          <value id="624" name="_21_SSM_TR_Floor1Button4_Floor1Button10_2_Floor1Button4_SM3"/>
+        </enum>
+        <enum id="625" name="SSM_ST_SM4" tagName="kcg_tag_SSM_ST_SM4">
+          <value id="626" name="SSM_st_Floor1Button10_SM4"/>
+          <value id="627" name="SSM_st_Floor1Button11_SM4"/>
+          <value id="628" name="SSM_st_Floor1Button4_SM4"/>
+        </enum>
+        <enum id="629" name="SSM_TR_SM4" tagName="kcg_tag_SSM_TR_SM4">
+          <value id="630" name="SSM_TR_no_trans_SM4"/>
+          <value id="631" name="_22_SSM_TR_Floor1Button10_Floor1Button4_1_Floor1Button10_SM4"/>
+          <value id="632" name="_23_SSM_TR_Floor1Button11_Floor1Button10_1_Floor1Button11_SM4"/>
+          <value id="633" name="_24_SSM_TR_Floor1Button4_Floor1Button11_1_Floor1Button4_SM4"/>
+          <value id="634" name="_25_SSM_TR_Floor1Button4_Floor1Button10_2_Floor1Button4_SM4"/>
+        </enum>
+        <enum id="635" name="_10_SSM_ST_SM1" tagName="kcg_tag__10_SSM_ST_SM1">
+          <value id="636" name="SSM_st_Floor1Button10_SM1"/>
+          <value id="637" name="SSM_st_Floor1Button11_SM1"/>
+          <value id="638" name="SSM_st_Floor1Button4_SM1"/>
+        </enum>
+        <enum id="639" name="_11_SSM_TR_SM1" tagName="kcg_tag__11_SSM_TR_SM1">
+          <value id="640" name="_26_SSM_TR_no_trans_SM1"/>
+          <value id="641" name="_27_SSM_TR_Floor1Button10_Floor1Button4_1_Floor1Button10_SM1"/>
+          <value id="642" name="_28_SSM_TR_Floor1Button11_Floor1Button10_1_Floor1Button11_SM1"/>
+          <value id="643" name="_29_SSM_TR_Floor1Button4_Floor1Button11_1_Floor1Button4_SM1"/>
+          <value id="644" name="_30_SSM_TR_Floor1Button4_Floor1Button10_2_Floor1Button4_SM1"/>
+        </enum>
+        <enum id="645" name="SSM_ST_SM5" tagName="kcg_tag_SSM_ST_SM5">
+          <value id="646" name="SSM_st_Floor1Button10_SM5"/>
+          <value id="647" name="SSM_st_Floor1Button11_SM5"/>
+          <value id="648" name="SSM_st_Floor1Button4_SM5"/>
+        </enum>
+        <enum id="649" name="SSM_TR_SM5" tagName="kcg_tag_SSM_TR_SM5">
+          <value id="650" name="SSM_TR_no_trans_SM5"/>
+          <value id="651" name="_31_SSM_TR_Floor1Button10_Floor1Button4_1_Floor1Button10_SM5"/>
+          <value id="652" name="_32_SSM_TR_Floor1Button11_Floor1Button10_1_Floor1Button11_SM5"/>
+          <value id="653" name="_33_SSM_TR_Floor1Button4_Floor1Button11_1_Floor1Button4_SM5"/>
+          <value id="654" name="_34_SSM_TR_Floor1Button4_Floor1Button10_2_Floor1Button4_SM5"/>
+        </enum>
+        <enum id="655" name="SSM_ST_SM6" tagName="kcg_tag_SSM_ST_SM6">
+          <value id="656" name="SSM_st_Floor1Button10_SM6"/>
+          <value id="657" name="SSM_st_Floor1Button11_SM6"/>
+          <value id="658" name="SSM_st_Floor1Button4_SM6"/>
+        </enum>
+        <enum id="659" name="SSM_TR_SM6" tagName="kcg_tag_SSM_TR_SM6">
+          <value id="660" name="SSM_TR_no_trans_SM6"/>
+          <value id="661" name="_35_SSM_TR_Floor1Button10_Floor1Button4_1_Floor1Button10_SM6"/>
+          <value id="662" name="_36_SSM_TR_Floor1Button11_Floor1Button10_1_Floor1Button11_SM6"/>
+          <value id="663" name="_37_SSM_TR_Floor1Button4_Floor1Button11_1_Floor1Button4_SM6"/>
+          <value id="664" name="_38_SSM_TR_Floor1Button4_Floor1Button10_2_Floor1Button4_SM6"/>
+        </enum>
+        <enum id="665" name="PDirection" tagName="kcg_tag_PDirection">
+          <value id="666" name="Upward"/>
+          <value id="667" name="Downward"/>
+          <value id="668" name="Stop"/>
+        </enum>
+        <enum id="669" name="Direction" tagName="kcg_tag_Direction">
+          <value id="670" name="Up"/>
+          <value id="671" name="Down"/>
+          <value id="672" name="None"/>
+        </enum>
+        <macro id="673" name="kcg_assign_array"/>
+        <macro id="674" name="kcg_assign_struct"/>
+        <macro id="675" name="kcg_lnot_uint8"/>
+        <macro id="676" name="kcg_lnot_uint16"/>
+        <macro id="677" name="kcg_lnot_uint32"/>
+        <macro id="678" name="kcg_lnot_uint64"/>
+        <macro id="679" name="kcg_lsl_uint8"/>
+        <macro id="680" name="kcg_lsl_uint16"/>
+        <macro id="681" name="kcg_lsl_uint32"/>
+        <macro id="682" name="kcg_lsl_uint64"/>
+        <macro id="683" name="kcg_true"/>
+        <macro id="684" name="kcg_false"/>
+        <macro id="685" name="kcg_lit_int8"/>
+        <macro id="686" name="kcg_lit_int16"/>
+        <macro id="687" name="kcg_lit_int32"/>
+        <macro id="688" name="kcg_lit_int64"/>
+        <macro id="689" name="kcg_lit_uint8"/>
+        <macro id="690" name="kcg_lit_uint16"/>
+        <macro id="691" name="kcg_lit_uint32"/>
+        <macro id="692" name="kcg_lit_uint64"/>
+        <macro id="693" name="kcg_lit_size"/>
+        <macro id="694" name="kcg_lit_float64"/>
+        <macro id="695" name="kcg_lit_float32"/>
+        <predefType id="696" name="kcg_int8"/>
+        <predefType id="697" name="kcg_int16"/>
+        <predefType id="698" name="kcg_int32"/>
+        <predefType id="699" name="kcg_int64"/>
+        <predefType id="700" name="kcg_uint8"/>
+        <predefType id="701" name="kcg_uint16"/>
+        <predefType id="702" name="kcg_uint32"/>
+        <predefType id="703" name="kcg_uint64"/>
+        <predefType id="704" name="kcg_size"/>
+        <predefType id="705" name="kcg_float64"/>
+        <predefType id="706" name="kcg_float32"/>
+        <predefType id="707" name="kcg_bool"/>
+        <predefType id="708" name="kcg_char"/>
+        <macro id="709" name="KCG_MAPW_CPY"/>
+      </file>
+      <file id="710" name="kcg_consts.h"/>
+      <file id="711" name="kcg_sensors.h"/>
+    </c>
+    <map srcId="705" dstId="694" role="wrapped-lit"/>
+    <map srcId="706" dstId="695" role="wrapped-lit"/>
+    <map srcId="704" dstId="693" role="wrapped-lit"/>
+    <map srcId="703" dstId="692" role="wrapped-lit"/>
+    <map srcId="703" dstId="678" role="wrapped-lnot"/>
+    <map srcId="703" dstId="682" role="wrapped-lsl"/>
+    <map srcId="702" dstId="691" role="wrapped-lit"/>
+    <map srcId="702" dstId="677" role="wrapped-lnot"/>
+    <map srcId="702" dstId="681" role="wrapped-lsl"/>
+    <map srcId="701" dstId="690" role="wrapped-lit"/>
+    <map srcId="701" dstId="676" role="wrapped-lnot"/>
+    <map srcId="701" dstId="680" role="wrapped-lsl"/>
+    <map srcId="700" dstId="689" role="wrapped-lit"/>
+    <map srcId="700" dstId="675" role="wrapped-lnot"/>
+    <map srcId="700" dstId="679" role="wrapped-lsl"/>
+    <map srcId="699" dstId="688" role="wrapped-lit"/>
+    <map srcId="698" dstId="687" role="wrapped-lit"/>
+    <map srcId="697" dstId="686" role="wrapped-lit"/>
+    <map srcId="696" dstId="685" role="wrapped-lit"/>
+  </generated>
+  <map modelId="140" generatedId="664"/>
+  <map modelId="138" generatedId="663"/>
+  <map modelId="131" generatedId="662"/>
+  <map modelId="128" generatedId="661"/>
+  <map modelId="125" generatedId="660" role="autom-no-trans-enum"/>
+  <map modelId="124" generatedId="654"/>
+  <map modelId="122" generatedId="653"/>
+  <map modelId="115" generatedId="652"/>
+  <map modelId="112" generatedId="651"/>
+  <map modelId="109" generatedId="650" role="autom-no-trans-enum"/>
+  <map modelId="108" generatedId="644"/>
+  <map modelId="106" generatedId="643"/>
+  <map modelId="99" generatedId="642"/>
+  <map modelId="96" generatedId="641"/>
+  <map modelId="93" generatedId="640" role="autom-no-trans-enum"/>
+  <map modelId="92" generatedId="634"/>
+  <map modelId="90" generatedId="633"/>
+  <map modelId="83" generatedId="632"/>
+  <map modelId="80" generatedId="631"/>
+  <map modelId="77" generatedId="630" role="autom-no-trans-enum"/>
+  <map modelId="76" generatedId="624"/>
+  <map modelId="74" generatedId="623"/>
+  <map modelId="67" generatedId="622"/>
+  <map modelId="64" generatedId="621"/>
+  <map modelId="61" generatedId="620" role="autom-no-trans-enum"/>
+  <map modelId="60" generatedId="614"/>
+  <map modelId="58" generatedId="613"/>
+  <map modelId="51" generatedId="612"/>
+  <map modelId="48" generatedId="611"/>
+  <map modelId="45" generatedId="610" role="autom-no-trans-enum"/>
+  <map modelId="251" generatedId="604"/>
+  <map modelId="249" generatedId="603"/>
+  <map modelId="247" generatedId="602"/>
+  <map modelId="244" generatedId="601"/>
+  <map modelId="241" generatedId="600"/>
+  <map modelId="238" generatedId="599"/>
+  <map modelId="235" generatedId="598"/>
+  <map modelId="232" generatedId="597"/>
+  <map modelId="229" generatedId="596"/>
+  <map modelId="226" generatedId="595"/>
+  <map modelId="224" generatedId="594"/>
+  <map modelId="222" generatedId="593"/>
+  <map modelId="219" generatedId="592" role="autom-no-trans-enum"/>
+  <map modelId="217" generatedId="581"/>
+  <map modelId="215" generatedId="580"/>
+  <map modelId="213" generatedId="579"/>
+  <map modelId="210" generatedId="578"/>
+  <map modelId="208" generatedId="577"/>
+  <map modelId="206" generatedId="576"/>
+  <map modelId="203" generatedId="575"/>
+  <map modelId="201" generatedId="574"/>
+  <map modelId="199" generatedId="573"/>
+  <map modelId="197" generatedId="572"/>
+  <map modelId="194" generatedId="571"/>
+  <map modelId="192" generatedId="570"/>
+  <map modelId="190" generatedId="569"/>
+  <map modelId="187" generatedId="568"/>
+  <map modelId="185" generatedId="567"/>
+  <map modelId="183" generatedId="566"/>
+  <map modelId="180" generatedId="565"/>
+  <map modelId="177" generatedId="564"/>
+  <map modelId="173" generatedId="563"/>
+  <map modelId="171" generatedId="562"/>
+  <map modelId="167" generatedId="561"/>
+  <map modelId="165" generatedId="560"/>
+  <map modelId="163" generatedId="559"/>
+  <map modelId="160" generatedId="558"/>
+  <map modelId="157" generatedId="557"/>
+  <map modelId="153" generatedId="556" role="autom-no-trans-enum"/>
+  <map modelId="313" generatedId="543" role="autom-no-trans-enum"/>
+  <map modelId="314" generatedId="541"/>
+  <map modelId="320" generatedId="539"/>
+  <map modelId="317" generatedId="538"/>
+  <map modelId="303" generatedId="537"/>
+  <map modelId="292" generatedId="536"/>
+  <map modelId="289" generatedId="535"/>
+  <map modelId="286" generatedId="534"/>
+  <map modelId="283" generatedId="533"/>
+  <map modelId="280" generatedId="532"/>
+  <map modelId="277" generatedId="531"/>
+  <map modelId="274" generatedId="530"/>
+  <map modelId="271" generatedId="529"/>
+  <map modelId="268" generatedId="528"/>
+  <map modelId="261" generatedId="527" role="autom-no-trans-enum"/>
+  <map modelId="377" generatedId="513"/>
+  <map modelId="374" generatedId="512"/>
+  <map modelId="371" generatedId="511"/>
+  <map modelId="364" generatedId="510"/>
+  <map modelId="360" generatedId="509"/>
+  <map modelId="356" generatedId="508"/>
+  <map modelId="353" generatedId="507"/>
+  <map modelId="349" generatedId="506"/>
+  <map modelId="341" generatedId="505"/>
+  <map modelId="338" generatedId="504"/>
+  <map modelId="334" generatedId="503"/>
+  <map modelId="331" generatedId="502"/>
+  <map modelId="326" generatedId="501" role="autom-no-trans-enum"/>
+  <map modelId="391" generatedId="493"/>
+  <map modelId="389" generatedId="492"/>
+  <map modelId="387" generatedId="491"/>
+  <map modelId="384" generatedId="490" role="autom-no-trans-enum"/>
+  <map modelId="327" generatedId="495"/>
+  <map modelId="335" generatedId="496"/>
+  <map modelId="361" generatedId="498"/>
+  <map modelId="365" generatedId="499"/>
+  <map modelId="342" generatedId="497"/>
+  <map modelId="227" generatedId="584"/>
+  <map modelId="230" generatedId="585"/>
+  <map modelId="233" generatedId="586"/>
+  <map modelId="220" generatedId="583"/>
+  <map modelId="239" generatedId="588"/>
+  <map modelId="236" generatedId="587"/>
+  <map modelId="242" generatedId="589"/>
+  <map modelId="245" generatedId="590"/>
+  <map modelId="116" generatedId="648"/>
+  <map modelId="110" generatedId="646"/>
+  <map modelId="113" generatedId="647"/>
+  <map modelId="19" generatedId="670"/>
+  <map modelId="20" generatedId="671"/>
+  <map modelId="21" generatedId="672"/>
+  <map modelId="385" generatedId="485"/>
+  <map modelId="392" generatedId="486"/>
+  <map modelId="393" generatedId="487"/>
+  <map modelId="394" generatedId="488"/>
+  <map modelId="293" generatedId="516"/>
+  <map modelId="294" generatedId="517"/>
+  <map modelId="295" generatedId="518"/>
+  <map modelId="296" generatedId="519"/>
+  <map modelId="297" generatedId="520"/>
+  <map modelId="304" generatedId="521"/>
+  <map modelId="305" generatedId="522"/>
+  <map modelId="307" generatedId="524"/>
+  <map modelId="308" generatedId="525"/>
+  <map modelId="306" generatedId="523"/>
+  <map modelId="262" generatedId="515"/>
+  <map modelId="15" generatedId="666"/>
+  <map modelId="16" generatedId="667"/>
+  <map modelId="17" generatedId="668"/>
+  <map modelId="68" generatedId="618"/>
+  <map modelId="62" generatedId="616"/>
+  <map modelId="65" generatedId="617"/>
+  <map modelId="52" generatedId="608"/>
+  <map modelId="46" generatedId="606"/>
+  <map modelId="49" generatedId="607"/>
+  <map modelId="161" generatedId="546"/>
+  <map modelId="181" generatedId="549"/>
+  <map modelId="188" generatedId="550"/>
+  <map modelId="174" generatedId="548"/>
+  <map modelId="195" generatedId="551"/>
+  <map modelId="204" generatedId="552"/>
+  <map modelId="168" generatedId="547"/>
+  <map modelId="211" generatedId="553"/>
+  <map modelId="154" generatedId="545"/>
+  <map modelId="218" generatedId="554"/>
+  <map modelId="84" generatedId="628"/>
+  <map modelId="78" generatedId="626"/>
+  <map modelId="81" generatedId="627"/>
+  <map modelId="100" generatedId="638"/>
+  <map modelId="94" generatedId="636"/>
+  <map modelId="97" generatedId="637"/>
+  <map modelId="132" generatedId="658"/>
+  <map modelId="126" generatedId="656"/>
+  <map modelId="129" generatedId="657"/>
+  <map modelId="22" generatedId="409" role="context-parameter"/>
+  <map modelId="22" generatedId="408" role="init-method"/>
+  <map modelId="22" generatedId="411" role="context-parameter"/>
+  <map modelId="22" generatedId="410" role="reset-method"/>
+  <map modelId="22" generatedId="413" role="input-struct-parameter"/>
+  <map modelId="29" generatedId="482"/>
+  <map modelId="323" generatedId="482"/>
+  <map modelId="28" generatedId="481"/>
+  <map modelId="27" generatedId="480"/>
+  <map modelId="26" generatedId="479"/>
+  <map modelId="25" generatedId="478"/>
+  <map modelId="24" generatedId="477"/>
+  <map modelId="23" generatedId="476"/>
+  <map modelId="22" generatedId="475" role="input-struct-type"/>
+  <map modelId="22" generatedId="414" role="context-parameter"/>
+  <map modelId="397" generatedId="474" role="init"/>
+  <map modelId="125" generatedId="463" role="memory"/>
+  <map modelId="137" generatedId="463" role="memory"/>
+  <map modelId="109" generatedId="462" role="memory"/>
+  <map modelId="121" generatedId="462" role="memory"/>
+  <map modelId="93" generatedId="461" role="memory"/>
+  <map modelId="105" generatedId="461" role="memory"/>
+  <map modelId="77" generatedId="460" role="memory"/>
+  <map modelId="89" generatedId="460" role="memory"/>
+  <map modelId="61" generatedId="459" role="memory"/>
+  <map modelId="73" generatedId="459" role="memory"/>
+  <map modelId="45" generatedId="458" role="memory"/>
+  <map modelId="57" generatedId="458" role="memory"/>
+  <map modelId="125" generatedId="457" role="autom-next-state"/>
+  <map modelId="109" generatedId="456" role="autom-next-state"/>
+  <map modelId="93" generatedId="455" role="autom-next-state"/>
+  <map modelId="77" generatedId="454" role="autom-next-state"/>
+  <map modelId="61" generatedId="453" role="autom-next-state"/>
+  <map modelId="45" generatedId="452" role="autom-next-state"/>
+  <map modelId="135" generatedId="451" role="memory"/>
+  <map modelId="134" generatedId="451"/>
+  <map modelId="119" generatedId="450" role="memory"/>
+  <map modelId="118" generatedId="450"/>
+  <map modelId="103" generatedId="449" role="memory"/>
+  <map modelId="102" generatedId="449"/>
+  <map modelId="87" generatedId="448" role="memory"/>
+  <map modelId="86" generatedId="448"/>
+  <map modelId="71" generatedId="447" role="memory"/>
+  <map modelId="70" generatedId="447"/>
+  <map modelId="55" generatedId="446" role="memory"/>
+  <map modelId="54" generatedId="446"/>
+  <map modelId="153" generatedId="445" role="memory"/>
+  <map modelId="153" generatedId="444" role="memory"/>
+  <map modelId="153" generatedId="443" role="memory"/>
+  <map modelId="159" generatedId="442" role="memory"/>
+  <map modelId="170" generatedId="442" role="memory"/>
+  <map modelId="219" generatedId="442" role="memory"/>
+  <map modelId="156" generatedId="441" role="memory"/>
+  <map modelId="179" generatedId="441" role="memory"/>
+  <map modelId="219" generatedId="441" role="memory"/>
+  <map modelId="176" generatedId="440" role="memory"/>
+  <map modelId="219" generatedId="440" role="memory"/>
+  <map modelId="219" generatedId="439" role="autom-next-state"/>
+  <map modelId="153" generatedId="438" role="autom-next-state"/>
+  <map modelId="302" generatedId="437" role="memory"/>
+  <map modelId="267" generatedId="436" role="memory"/>
+  <map modelId="270" generatedId="436" role="memory"/>
+  <map modelId="273" generatedId="436" role="memory"/>
+  <map modelId="276" generatedId="436" role="memory"/>
+  <map modelId="279" generatedId="436" role="memory"/>
+  <map modelId="282" generatedId="436" role="memory"/>
+  <map modelId="285" generatedId="436" role="memory"/>
+  <map modelId="288" generatedId="436" role="memory"/>
+  <map modelId="291" generatedId="436" role="memory"/>
+  <map modelId="316" generatedId="435" role="memory"/>
+  <map modelId="319" generatedId="435" role="memory"/>
+  <map modelId="261" generatedId="434" role="autom-next-state"/>
+  <map modelId="300" generatedId="433" role="memory"/>
+  <map modelId="299" generatedId="433"/>
+  <map modelId="265" generatedId="432" role="memory"/>
+  <map modelId="264" generatedId="432"/>
+  <map modelId="324" generatedId="431"/>
+  <map modelId="326" generatedId="431" role="memory"/>
+  <map modelId="322" generatedId="430"/>
+  <map modelId="330" generatedId="430" role="memory"/>
+  <map modelId="333" generatedId="430" role="memory"/>
+  <map modelId="340" generatedId="430" role="memory"/>
+  <map modelId="348" generatedId="430" role="memory"/>
+  <map modelId="352" generatedId="430" role="memory"/>
+  <map modelId="359" generatedId="430" role="memory"/>
+  <map modelId="363" generatedId="430" role="memory"/>
+  <map modelId="376" generatedId="430" role="memory"/>
+  <map modelId="347" generatedId="429" role="memory"/>
+  <map modelId="351" generatedId="429" role="memory"/>
+  <map modelId="355" generatedId="429" role="memory"/>
+  <map modelId="370" generatedId="429" role="memory"/>
+  <map modelId="373" generatedId="429" role="memory"/>
+  <map modelId="326" generatedId="428" role="memory"/>
+  <map modelId="357" generatedId="428" role="memory"/>
+  <map modelId="358" generatedId="428" role="memory"/>
+  <map modelId="372" generatedId="428" role="memory"/>
+  <map modelId="326" generatedId="427" role="memory"/>
+  <map modelId="328" generatedId="427" role="memory"/>
+  <map modelId="336" generatedId="427" role="memory"/>
+  <map modelId="326" generatedId="426" role="autom-next-state"/>
+  <map modelId="368" generatedId="425" role="memory"/>
+  <map modelId="367" generatedId="425"/>
+  <map modelId="345" generatedId="424" role="memory"/>
+  <map modelId="344" generatedId="424"/>
+  <map modelId="383" generatedId="423"/>
+  <map modelId="384" generatedId="423" role="memory"/>
+  <map modelId="384" generatedId="422" role="autom-next-state"/>
+  <map modelId="396" generatedId="421" role="memory"/>
+  <map modelId="325" generatedId="421"/>
+  <map modelId="397" generatedId="420" role="memory"/>
+  <map modelId="395" generatedId="420" role="memory"/>
+  <map modelId="399" generatedId="419" role="memory"/>
+  <map modelId="398" generatedId="418" role="memory"/>
+  <map modelId="31" generatedId="417"/>
+  <map modelId="30" generatedId="416"/>
+  <map modelId="22" generatedId="415" role="context-type"/>
+  <map modelId="22" generatedId="407" role="interface-file"/>
+  <map modelId="22" generatedId="412" role="cycle-method"/>
+  <map modelId="18" generatedId="669"/>
+  <map modelId="14" generatedId="665"/>
+  <map modelId="125" generatedId="659" role="autom-transitions-type"/>
+  <map modelId="125" generatedId="655" role="autom-states-type"/>
+  <map modelId="109" generatedId="649" role="autom-transitions-type"/>
+  <map modelId="109" generatedId="645" role="autom-states-type"/>
+  <map modelId="93" generatedId="639" role="autom-transitions-type"/>
+  <map modelId="93" generatedId="635" role="autom-states-type"/>
+  <map modelId="77" generatedId="629" role="autom-transitions-type"/>
+  <map modelId="77" generatedId="625" role="autom-states-type"/>
+  <map modelId="61" generatedId="619" role="autom-transitions-type"/>
+  <map modelId="61" generatedId="615" role="autom-states-type"/>
+  <map modelId="45" generatedId="609" role="autom-transitions-type"/>
+  <map modelId="45" generatedId="605" role="autom-states-type"/>
+  <map modelId="219" generatedId="591" role="autom-transitions-type"/>
+  <map modelId="219" generatedId="582" role="autom-states-type"/>
+  <map modelId="153" generatedId="555" role="autom-transitions-type"/>
+  <map modelId="153" generatedId="544" role="autom-states-type"/>
+  <map modelId="313" generatedId="542" role="autom-transitions-type"/>
+  <map modelId="313" generatedId="540" role="autom-states-type"/>
+  <map modelId="261" generatedId="526" role="autom-transitions-type"/>
+  <map modelId="261" generatedId="514" role="autom-states-type"/>
+  <map modelId="326" generatedId="500" role="autom-transitions-type"/>
+  <map modelId="326" generatedId="494" role="autom-states-type"/>
+  <map modelId="384" generatedId="489" role="autom-transitions-type"/>
+  <map modelId="384" generatedId="484" role="autom-states-type"/>
+  <map modelId="2" generatedId="708"/>
+  <map modelId="1" generatedId="707"/>
+  <map modelId="12" generatedId="705"/>
+  <map modelId="11" generatedId="706"/>
+  <map modelId="13" generatedId="704"/>
+  <map modelId="10" generatedId="703"/>
+  <map modelId="9" generatedId="702"/>
+  <map modelId="8" generatedId="701"/>
+  <map modelId="7" generatedId="700"/>
+  <map modelId="6" generatedId="699"/>
+  <map modelId="5" generatedId="698"/>
+  <map modelId="4" generatedId="697"/>
+  <map modelId="3" generatedId="696"/>
+</mapping>
+<!--$********** SCADE Suite KCG 32-bit 6.6.2 (build i4) **********
+** mapping.xml
+** Generation date: 2022-02-25T19:14:34
+*************************************************************$-->

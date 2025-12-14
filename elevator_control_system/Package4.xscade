@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="LabQ2">
+			<declarations>
+				<Type name="Direction">
+					<definition>
+						<Enum>
+							<values>
+								<Value name="Up">
+									<pragmas>
+										<ed:Value oid="!ed/65d6/67C6/2DAC/620bda592fb7"/>
+									</pragmas>
+								</Value>
+								<Value name="Down">
+									<pragmas>
+										<ed:Value oid="!ed/65d7/67C6/2DAC/620bda6113ec"/>
+									</pragmas>
+								</Value>
+								<Value name="Unknown">
+									<pragmas>
+										<ed:Value oid="!ed/5ff7/150/378C/62150e4d7eb4"/>
+									</pragmas>
+								</Value>
+							</values>
+						</Enum>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/6596/67C6/2DAC/620bd5834c10"/>
+					</pragmas>
+				</Type>
+				<Operator name="PositionProcessor" href="PositionProcessor.xscade"/>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/5f6d/67C6/2DAC/620bc488621c" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/5f6e/67C6/2DAC/620bc488789c" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/5f6f/67C6/2DAC/620bc4885a6" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/5f70/67C6/2DAC/620bc4882217" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

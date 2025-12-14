@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Operator kind="node" name="CarMotorStop">
+			<inputs>
+				<Variable name="SafetyIn">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<last>
+						<ConstValue value="true"/>
+					</last>
+					<pragmas>
+						<ed:Variable oid="!ed/5cf5/1487/4D1C/62189ecf406b"/>
+					</pragmas>
+				</Variable>
+				<Variable name="PlanningIn">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<last>
+						<ConstValue value="true"/>
+					</last>
+					<pragmas>
+						<ed:Variable oid="!ed/5d03/1487/4D1C/62189ee7378c"/>
+					</pragmas>
+				</Variable>
+			</inputs>
+			<outputs>
+				<Variable name="CarMotorStop">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<default>
+						<ConstValue value="true"/>
+					</default>
+					<last>
+						<ConstValue value="true"/>
+					</last>
+					<pragmas>
+						<ed:Variable oid="!ed/5d2a/1487/4D1C/62189f0d58fc"/>
+					</pragmas>
+				</Variable>
+			</outputs>
+			<data>
+				<StateMachine name="SM1">
+					<states>
+						<State initial="true" name="State1">
+							<unless>
+								<Transition kind="restart">
+									<target>
+										<StateRef name="State2"/>
+									</target>
+									<condition>
+										<!--  last 'SafetyIn = true or  last 'PlanningIn = true -->
+										<NAryOp name="2" operator="or">
+											<operands>
+												<!--  last 'SafetyIn = true -->
+												<BinaryOp name="5" operator="=">
+													<operands>
+														<Last>
+															<variable>
+																<ConstVarRef name="SafetyIn"/>
+															</variable>
+														</Last>
+														<ConstValue value="true"/>
+													</operands>
+												</BinaryOp>
+												<!--  last 'PlanningIn = true -->
+												<BinaryOp name="6" operator="=">
+													<operands>
+														<Last>
+															<variable>
+																<ConstVarRef name="PlanningIn"/>
+															</variable>
+														</Last>
+														<ConstValue value="true"/>
+													</operands>
+												</BinaryOp>
+											</operands>
+										</NAryOp>
+									</condition>
+									<pragmas>
+										<ed:Transition oid="!ed/5db0/1487/4D1C/62189f875d91"/>
+									</pragmas>
+								</Transition>
+								<Transition kind="restart">
+									<target>
+										<StateRef name="State1"/>
+									</target>
+									<condition>
+										<!--  last 'SafetyIn = false and  last 'PlanningIn = false -->
+										<NAryOp name="3" operator="and">
+											<operands>
+												<!--  last 'SafetyIn = false -->
+												<BinaryOp name="7" operator="=">
+													<operands>
+														<Last>
+															<variable>
+																<ConstVarRef name="SafetyIn"/>
+															</variable>
+														</Last>
+														<ConstValue value="false"/>
+													</operands>
+												</BinaryOp>
+												<!--  last 'PlanningIn = false -->
+												<BinaryOp name="8" operator="=">
+													<operands>
+														<Last>
+															<variable>
+																<ConstVarRef name="PlanningIn"/>
+															</variable>
+														</Last>
+														<ConstValue value="false"/>
+													</operands>
+												</BinaryOp>
+											</operands>
+										</NAryOp>
+									</condition>
+									<pragmas>
+										<ed:Transition oid="!ed/5dba/1487/4D1C/62189f9b4681"/>
+									</pragmas>
+								</Transition>
+							</unless>
+							<locals>
+								<Variable name="_L1">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Variable oid="!ed/5da2/1487/4D1C/62189f83a94"/>
+									</pragmas>
+								</Variable>
+							</locals>
+							<data>
+								<!-- CarMotorStop = _L1; -->
+								<Equation>
+									<lefts>
+										<VariableRef name="CarMotorStop"/>
+									</lefts>
+									<right>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L1"/>
+											</path>
+										</IdExpression>
+									</right>
+									<pragmas>
+										<ed:Equation oid="!ed/5d93/1487/4D1C/62189f7f438d"/>
+									</pragmas>
+								</Equation>
+								<!-- _L1 = false; -->
+								<Equation>
+									<lefts>
+										<VariableRef name="_L1"/>
+									</lefts>
+									<right>
+										<ConstValue value="false"/>
+									</right>
+									<pragmas>
+										<ed:Equation oid="!ed/5da1/1487/4D1C/62189f831211"/>
+									</pragmas>
+								</Equation>
+							</data>
+							<pragmas>
+								<ed:State oid="!ed/5d5b/1487/4D1C/62189f5e7d19"/>
+							</pragmas>
+						</State>
+						<State name="State2">
+							<locals>
+								<Variable name="_L1">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Variable oid="!ed/5d79/1487/4D1C/62189f6e55b3"/>
+									</pragmas>
+								</Variable>
+							</locals>
+							<data>
+								<!-- CarMotorStop = _L1; -->
+								<Equation>
+									<lefts>
+										<VariableRef name="CarMotorStop"/>
+									</lefts>
+									<right>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L1"/>
+											</path>
+										</IdExpression>
+									</right>
+									<pragmas>
+										<ed:Equation oid="!ed/5d6a/1487/4D1C/62189f6a5092"/>
+									</pragmas>
+								</Equation>
+								<!-- _L1 = true; -->
+								<Equation>
+									<lefts>
+										<VariableRef name="_L1"/>
+									</lefts>
+									<right>
+										<ConstValue value="true"/>
+									</right>
+									<pragmas>
+										<ed:Equation oid="!ed/5d78/1487/4D1C/62189f6e2627"/>
+									</pragmas>
+								</Equation>
+							</data>
+							<pragmas>
+								<ed:State oid="!ed/5d65/1487/4D1C/62189f655ee0"/>
+							</pragmas>
+						</State>
+					</states>
+					<pragmas>
+						<ed:StateMachine oid="!ed/5d52/1487/4D1C/62189f5c848"/>
+					</pragmas>
+				</StateMachine>
+			</data>
+			<pragmas>
+				<ed:Operator oid="!ed/5cf3/1487/4D1C/62189ec079e2" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7">
+					<diagrams>
+						<NetDiagram name="CarMotorStop_1" landscape="true" format="A4 (210 297)" oid="!ed/5cf4/1487/4D1C/62189ec05b87">
+							<presentationElements>
+								<StateMachineGE presentable="!ed/5d52/1487/4D1C/62189f5c848">
+									<position>
+										<Point x="6271" y="5186"/>
+									</position>
+									<size>
+										<Size width="15928" height="7382"/>
+									</size>
+								</StateMachineGE>
+								<StateGE presentable="!ed/5d5b/1487/4D1C/62189f5e7d19">
+									<position>
+										<Point x="7805" y="7382"/>
+									</position>
+									<size>
+										<Size width="4710" height="3598"/>
+									</size>
+								</StateGE>
+								<StateGE presentable="!ed/5d65/1487/4D1C/62189f655ee0">
+									<position>
+										<Point x="16166" y="7329"/>
+									</position>
+									<size>
+										<Size width="4710" height="3598"/>
+									</size>
+								</StateGE>
+								<EquationGE presentable="!ed/5d6a/1487/4D1C/62189f6a5092">
+									<position>
+										<Point x="18838" y="9049"/>
+									</position>
+									<size>
+										<Size width="318" height="503"/>
+									</size>
+								</EquationGE>
+								<EquationGE kind="OBJ_LIT" presentable="!ed/5d78/1487/4D1C/62189f6e2627">
+									<position>
+										<Point x="17330" y="9287"/>
+									</position>
+									<size>
+										<Size width="212" height="318"/>
+									</size>
+								</EquationGE>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/5d78/1487/4D1C/62189f6e2627" dstEquation="!ed/5d6a/1487/4D1C/62189f6a5092">
+									<positions>
+										<Point x="17542" y="9446"/>
+										<Point x="18203" y="9446"/>
+										<Point x="18203" y="9313"/>
+										<Point x="18891" y="9313"/>
+									</positions>
+								</Edge>
+								<EquationGE presentable="!ed/5d93/1487/4D1C/62189f7f438d">
+									<position>
+										<Point x="10954" y="8969"/>
+									</position>
+									<size>
+										<Size width="317" height="503"/>
+									</size>
+								</EquationGE>
+								<EquationGE kind="OBJ_LIT" presentable="!ed/5da1/1487/4D1C/62189f831211">
+									<position>
+										<Point x="8652" y="9181"/>
+									</position>
+									<size>
+										<Size width="212" height="318"/>
+									</size>
+								</EquationGE>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/5da1/1487/4D1C/62189f831211" dstEquation="!ed/5d93/1487/4D1C/62189f7f438d">
+									<positions>
+										<Point x="8864" y="9340"/>
+										<Point x="9922" y="9340"/>
+										<Point x="9922" y="9234"/>
+										<Point x="11007" y="9234"/>
+									</positions>
+								</Edge>
+								<TransitionGE presentable="!ed/5db0/1487/4D1C/62189f875d91">
+									<textAreas>
+										<TextArea text="last 'SafetyIn = true or last 'PlanningIn = true" role="130"/>
+									</textAreas>
+									<positions>
+										<Point x="12515" y="9948"/>
+										<Point x="13732" y="9895"/>
+										<Point x="14949" y="9843"/>
+										<Point x="16166" y="9763"/>
+									</positions>
+									<labelSize>
+										<Size width="5927" height="370"/>
+									</labelSize>
+									<labelPos>
+										<Point x="11165" y="11457"/>
+									</labelPos>
+									<slashPos>
+										<Point x="16298" y="11457"/>
+									</slashPos>
+								</TransitionGE>
+								<TransitionGE presentable="!ed/5dba/1487/4D1C/62189f9b4681">
+									<textAreas>
+										<TextArea text="last 'SafetyIn = false and last 'PlanningIn = false" role="130"/>
+									</textAreas>
+									<positions>
+										<Point x="10927" y="7382"/>
+										<Point x="10901" y="6085"/>
+										<Point x="9234" y="6853"/>
+										<Point x="9260" y="7382"/>
+									</positions>
+									<labelSize>
+										<Size width="6377" height="370"/>
+									</labelSize>
+									<labelPos>
+										<Point x="6402" y="5927"/>
+									</labelPos>
+									<slashPos>
+										<Point x="11985" y="5927"/>
+									</slashPos>
+								</TransitionGE>
+							</presentationElements>
+						</NetDiagram>
+					</diagrams>
+				</ed:Operator>
+			</pragmas>
+		</Operator>
+	</declarations>
+</File>

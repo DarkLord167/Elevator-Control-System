@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="LabQ1">
+			<declarations>
+				<Operator name="Stop" href="Stop.xscade"/>
+				<Operator name="Floor3" href="Floor32.xscade"/>
+				<Operator name="Floor2" href="Floor22.xscade"/>
+				<Operator name="Floor1" href="Floor1.xscade"/>
+				<Operator name="Doors" href="Doors.xscade"/>
+				<Operator name="AtFloor" href="AtFloor.xscade"/>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/5b09/67C6/2DAC/620bc42d6492" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/5b0a/67C6/2DAC/620bc42d772f" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/5b0b/67C6/2DAC/620bc42d3dcb" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/5b0c/67C6/2DAC/620bc42dcd1" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

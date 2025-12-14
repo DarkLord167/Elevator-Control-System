@@ -1,0 +1,98 @@
+
+[STUDIO\TOOLS\CONFIGURATIONS\Code Generator]
+
+"C:\\Users\\DarkLord\\SCADE\\The Button Processor\\The Button Processor.etp"="Simulation" 
+"C:\\Users\\DarkLord\\OneDrive\\MASTER\\E-Books\\Semester 1\\Design and Analysis of Embedded Realtime Systems\\Assignments\\Final Project\\The Button Processor\\The Button Processor.etp"="KCG" 
+"C:\\Users\\DarkLord\\OneDrive\\MASTER\\E-Books\\Semester 1\\Design and Analysis of Embedded Realtime Systems\\Assignments\\Final Project\\Elevator Control System\\The Button Processor.etp"="Simulation" 
+"C:\\Users\\DarkLord\\OneDrive\\MASTER\\E-Books\\Semester 1\\Design and Analysis of Embedded Realtime Systems\\Assignments\\Final Project\\Elevator Control System\\Elevator\\Elevator.etp"="Default" 
+"C:\\Users\\DarkLord\\OneDrive\\MASTER\\E-Books\\Semester 1\\Design and Analysis of Embedded Realtime Systems\\Assignments\\Final Project\\Elevator Control System\\The Elevator Arichitecture\\The Elevator Arichitecture.etp"="ModelConsistencyCheck" 
+
+[STUDIO\TOOLS\CONFIGURATIONS\Metrics and Rules Checker]
+
+"C:\\Users\\DarkLord\\SCADE\\The Button Processor\\The Button Processor.etp"="MetricRule" 
+"C:\\Users\\DarkLord\\OneDrive\\MASTER\\E-Books\\Semester 1\\Design and Analysis of Embedded Realtime Systems\\Assignments\\Final Project\\The Button Processor\\The Button Processor.etp"="MetricRule" 
+"C:\\Users\\DarkLord\\OneDrive\\MASTER\\E-Books\\Semester 1\\Design and Analysis of Embedded Realtime Systems\\Assignments\\Final Project\\Elevator Control System\\The Button Processor.etp"="MetricRule" 
+"C:\\Users\\DarkLord\\OneDrive\\MASTER\\E-Books\\Semester 1\\Design and Analysis of Embedded Realtime Systems\\Assignments\\Final Project\\Elevator Control System\\Elevator\\Elevator.etp"="Default" 
+"C:\\Users\\DarkLord\\OneDrive\\MASTER\\E-Books\\Semester 1\\Design and Analysis of Embedded Realtime Systems\\Assignments\\Final Project\\Elevator Control System\\The Elevator Arichitecture\\The Elevator Arichitecture.etp"="Default" 
+
+[STUDIO\TOOLS\CONFIGURATIONS\Reporter]
+
+"C:\\Users\\DarkLord\\SCADE\\The Button Processor\\The Button Processor.etp"="HTML" 
+"C:\\Users\\DarkLord\\OneDrive\\MASTER\\E-Books\\Semester 1\\Design and Analysis of Embedded Realtime Systems\\Assignments\\Final Project\\The Button Processor\\The Button Processor.etp"="HTML" 
+"C:\\Users\\DarkLord\\OneDrive\\MASTER\\E-Books\\Semester 1\\Design and Analysis of Embedded Realtime Systems\\Assignments\\Final Project\\Elevator Control System\\The Button Processor.etp"="HTML" 
+"C:\\Users\\DarkLord\\OneDrive\\MASTER\\E-Books\\Semester 1\\Design and Analysis of Embedded Realtime Systems\\Assignments\\Final Project\\Elevator Control System\\Elevator\\Elevator.etp"="HTML" 
+"C:\\Users\\DarkLord\\OneDrive\\MASTER\\E-Books\\Semester 1\\Design and Analysis of Embedded Realtime Systems\\Assignments\\Final Project\\Elevator Control System\\The Elevator Arichitecture\\The Elevator Arichitecture.etp"="HTML" 
+
+[STUDIO\TOOLS\CONFIGURATIONS\Timing and Stack Analysis Tools]
+
+"C:\\Users\\DarkLord\\SCADE\\The Button Processor\\The Button Processor.etp"="KCG" 
+"C:\\Users\\DarkLord\\OneDrive\\MASTER\\E-Books\\Semester 1\\Design and Analysis of Embedded Realtime Systems\\Assignments\\Final Project\\The Button Processor\\The Button Processor.etp"="KCG" 
+"C:\\Users\\DarkLord\\OneDrive\\MASTER\\E-Books\\Semester 1\\Design and Analysis of Embedded Realtime Systems\\Assignments\\Final Project\\Elevator Control System\\The Button Processor.etp"="KCG" 
+"C:\\Users\\DarkLord\\OneDrive\\MASTER\\E-Books\\Semester 1\\Design and Analysis of Embedded Realtime Systems\\Assignments\\Final Project\\Elevator Control System\\Elevator\\Elevator.etp"="Default" 
+"C:\\Users\\DarkLord\\OneDrive\\MASTER\\E-Books\\Semester 1\\Design and Analysis of Embedded Realtime Systems\\Assignments\\Final Project\\Elevator Control System\\The Elevator Arichitecture\\The Elevator Arichitecture.etp"="Default" 
+
+[STUDIO\Workspace]
+
+"ActiveProject"="C:\\Users\\DarkLord\\OneDrive\\MASTER\\E-Books\\Semester 1\\Design and Analysis of Embedded Realtime Systems\\Assignments\\Final Project\\Elevator Control System\\The Button Processor.etp" 
+
+[SCADE\Editor\Shortcut]
+
+"groupNb"="0" 
+
+[SCADE\Editor\Tool]
+
+"UsePolyline"="false" 
+"TransitionKind"="strong" 
+
+[SCADE\Diff\Tool]
+
+"LastProject1"="" 
+"LastProject2"="" 
+"ModifiedOnly"="0" 
+
+[SCADE\Generator\Tool]
+
+"PragmaTarget"="C" 
+
+[SCADE\Simulator\Simulation]
+
+"Latency"="200" 
+"RefreshRate"="1" 
+
+[SCADE\Simulator\BinaryDisplay]
+
+"Count"="0" 
+
+[SCADE\Simulator\OctalDisplay]
+
+"Count"="0" 
+
+[SCADE\Simulator\HexadecimalDisplay]
+
+"Count"="0" 
+
+[SCADE\Simulator\Watch]
+
+"Count"="0" 
+
+[SCADE\Simulator\Graph]
+
+"Count"="0" 
+
+[SCADE\Simulator\ControlBreakpoint]
+
+"Count"="0" 
+
+[SCADE\Simulator\DataBreakpoint]
+
+"Count"="0" 
+
+[SCADE\Simulator\TclBreakpoint]
+
+"Count"="0" 
+
+[STUDIO\TOOLS\CONFIGURATIONS\Architect Checker]
+
+"C:\\Users\\DarkLord\\OneDrive\\MASTER\\E-Books\\Semester 1\\Design and Analysis of Embedded Realtime Systems\\Assignments\\Final Project\\Elevator Control System\\The Button Processor.etp"="KCG" 
+"C:\\Users\\DarkLord\\OneDrive\\MASTER\\E-Books\\Semester 1\\Design and Analysis of Embedded Realtime Systems\\Assignments\\Final Project\\Elevator Control System\\Elevator\\Elevator.etp"="BasicCheck" 
+"C:\\Users\\DarkLord\\OneDrive\\MASTER\\E-Books\\Semester 1\\Design and Analysis of Embedded Realtime Systems\\Assignments\\Final Project\\Elevator Control System\\The Elevator Arichitecture\\The Elevator Arichitecture.etp"="BasicCheck" 
